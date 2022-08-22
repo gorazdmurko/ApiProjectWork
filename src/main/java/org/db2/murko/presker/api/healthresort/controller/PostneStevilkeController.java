@@ -32,7 +32,7 @@ public class PostneStevilkeController {
         PostneStevilke stevilka = service.get(id);
 
         if (stevilka != null) {
-            System.out.println("Postna stevilka: " + stevilka);
+            stevilka.toString();
             model.addAttribute("id", stevilka.getId_postne_stevilke());
             model.addAttribute("postna_st", stevilka.getPostna_stevilka());
             model.addAttribute("kraj", stevilka.getKraj_mesto());
