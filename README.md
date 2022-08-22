@@ -21,11 +21,11 @@ PULL
 git pull
 
 # LOCAL BRANCHES
-git branch ~~ returns an info of current local branch
-git checkout develop ~~ switches to develop local branch (if already exists)
-git checkout -b develop ~~ creates local develop branch and switches to it
-git checkout -b praksa develop ~~ creates new branch from your current branch
-git push -u origin 'branch-name' ~~ pushing a current local branch to newly created remote branch (-u is the shortcut for --set-upstream)
+- git branch ~~ returns an info of current local branch
+- git checkout develop ~~ switches to develop local branch (if already exists)
+- git checkout -b develop ~~ creates local develop branch and switches to it
+- git checkout -b praksa develop ~~ creates new branch from your current branch
+- git push -u origin 'branch-name' ~~ pushing a current local branch to newly created remote branch (-u is the shortcut for --set-upstream)
 
 # REMOTE BRANCHES
 git fetch --all
