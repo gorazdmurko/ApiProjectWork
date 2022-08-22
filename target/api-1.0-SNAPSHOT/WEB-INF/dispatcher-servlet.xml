@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:component-scan base-package="org.db2.murko.presker.api.healthresort" />
+    <tx:annotation-driven />
+
+    <!-- 1. DATA SOURCE - postgreSql DB -->
+    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+          name="dataSource"
+          p:driverClassName="org.postgresql.Driver"
+          p:url="jdbc:postgresql://localhost:5432/health_resort"
+          p:username="postgres"
+          p:password="postgres" />
+
+    <!-- 2. SESSION FACTORY takes care of establishing the connection & provides a hibernate session at the end - hibernate5 -->
+    <bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
+          name="sessionFactory"
+          p:dataSource-ref="dataSource">
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>   <!-- generates sql queries from the objects we provide -->
+                <prop key="hibernate.show_sql">true</prop>                                      <!-- should display all the queries it creates -->
+            </props>
+        </property>
+        <property name="annotatedClasses">
+            <list>
+                <value>org.db2.murko.presker.api.healthresort.entity.Blagajne</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.DavcneStopnje</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.DodatneStoritvePostavke</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.Drzave</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.IzdaniRacuni</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.IzdaniRacuniPostavke</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.IzdelkiStoritve</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.IzdelkiStoritveSobe</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.Kategorije</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.Objekti</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.Oddelki</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.Osebe</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.PaketiPozicije</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.PoslovneEnote</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.PoslovniPartnerji</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.PostneStevilke</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.PPKontakti</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.RacuniPlacila</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.Rezervacije</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.RezervacijeDodatneStoritve</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.RezervacijePozicije</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.RezervacijeSobe</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.Sobe</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.SobeStatusi</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.TransakcijskiRacuni</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.TransakcijskiRacunPoslovneEnote</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.VrstePlacil</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.Zaposleni</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 3. HIBERNATE TEMPLATE - hibernate5 -->
+    <bean class="org.springframework.orm.hibernate5.HibernateTemplate"
+          name="hibernateTemplate" p:sessionFactory-ref="sessionFactory" />
+
+    <!-- 4. TRANSACTION MANAGER - hibernate5 -->
+    <bean class="org.springframework.orm.hibernate5.HibernateTransactionManager"
+          name="transactionManager" p:sessionFactory-ref="sessionFactory" />
+
+    <!-- 5. VIEW RESOLVER configuration !! -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" name="viewResolver">    <!-- class resolves a complete view name -->
+        <property name="prefix">
+            <value>/WEB-INF/jsps/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+
+</beans>
