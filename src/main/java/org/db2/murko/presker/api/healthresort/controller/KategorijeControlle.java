@@ -10,21 +10,21 @@ public class KategorijeControlle {
 
     // service
 
-    private final String x_VIEW = "";
-    private final String x_LIST_VIEW = "";
+    private final String KATEGORIJE_VIEW = "kategorijeView";
+    private final String KATEGORIJE_LIST_VIEW = "kategorijeListView";
 
     @RequestMapping(value = "get", method = RequestMethod.POST)
     public String getView() {
-        return x_VIEW;
+        return KATEGORIJE_VIEW;
     }
 
     @RequestMapping(value = "getEntity", method = RequestMethod.POST)
     public String getEntity() {
-        return x_VIEW;
+        return KATEGORIJE_VIEW;
     }
 
     @RequestMapping(value = "getList", method = RequestMethod.GET)
     public String getList() {
-        return x_LIST_VIEW;
+        return KATEGORIJE_LIST_VIEW;
     }
 }

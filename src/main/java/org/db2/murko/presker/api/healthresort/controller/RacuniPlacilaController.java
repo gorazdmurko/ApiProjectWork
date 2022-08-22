@@ -10,21 +10,21 @@ public class RacuniPlacilaController {
 
     // service
 
-    private final String x_VIEW = "";
-    private final String x_LIST_VIEW = "";
+    private final String RACUNI_PLACILA_VIEW = "racuniPlacilaView";
+    private final String RACUNI_PLACILA_LIST_VIEW = "racuniPlacilaListView";
 
     @RequestMapping(value = "get", method = RequestMethod.POST)
     public String getView() {
-        return x_VIEW;
+        return RACUNI_PLACILA_VIEW;
     }
 
     @RequestMapping(value = "getEntity", method = RequestMethod.POST)
     public String getEntity() {
-        return x_VIEW;
+        return RACUNI_PLACILA_VIEW;
     }
 
     @RequestMapping(value = "getList", method = RequestMethod.GET)
     public String getList() {
-        return x_LIST_VIEW;
+        return RACUNI_PLACILA_LIST_VIEW;
     }
 }

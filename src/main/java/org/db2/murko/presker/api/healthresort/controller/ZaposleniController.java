@@ -10,21 +10,21 @@ public class ZaposleniController {
 
     // service
 
-    private final String x_VIEW = "";
-    private final String x_LIST_VIEW = "";
+    private final String ZAPOSLENI_VIEW = "zaposleniView";
+    private final String ZAPOSLENI_LIST_VIEW = "zaposleniListView";
 
     @RequestMapping(value = "get", method = RequestMethod.POST)
     public String getView() {
-        return x_VIEW;
+        return ZAPOSLENI_VIEW;
     }
 
     @RequestMapping(value = "getEntity", method = RequestMethod.POST)
     public String getEntity() {
-        return x_VIEW;
+        return ZAPOSLENI_VIEW;
     }
 
     @RequestMapping(value = "getList", method = RequestMethod.GET)
     public String getList() {
-        return x_LIST_VIEW;
+        return ZAPOSLENI_LIST_VIEW;
     }
 }

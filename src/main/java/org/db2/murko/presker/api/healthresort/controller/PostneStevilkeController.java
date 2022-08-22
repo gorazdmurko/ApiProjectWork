@@ -1,6 +1,5 @@
 package org.db2.murko.presker.api.healthresort.controller;
 
-import org.db2.murko.presker.api.healthresort.entity.PoslovneEnote;
 import org.db2.murko.presker.api.healthresort.entity.PostneStevilke;
 import org.db2.murko.presker.api.healthresort.services.IPostneStevilkeService;
 import org.springframework.beans.factory.annotation.Autowired;

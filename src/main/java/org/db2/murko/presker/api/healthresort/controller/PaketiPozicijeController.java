@@ -10,21 +10,21 @@ public class PaketiPozicijeController {
 
     // service
 
-    private final String x_VIEW = "";
-    private final String x_LIST_VIEW = "";
+    private final String PAKETI_POZICIJE_VIEW = "paketiPozicijeView";
+    private final String PAKETI_POZICIJE_LIST_VIEW = "paketiPozicijeListView";
 
     @RequestMapping(value = "get", method = RequestMethod.POST)
     public String getView() {
-        return x_VIEW;
+        return PAKETI_POZICIJE_VIEW;
     }
 
     @RequestMapping(value = "getEntity", method = RequestMethod.POST)
     public String getEntity() {
-        return x_VIEW;
+        return PAKETI_POZICIJE_VIEW;
     }
 
     @RequestMapping(value = "getList", method = RequestMethod.GET)
     public String getList() {
-        return x_LIST_VIEW;
+        return PAKETI_POZICIJE_LIST_VIEW;
     }
 }

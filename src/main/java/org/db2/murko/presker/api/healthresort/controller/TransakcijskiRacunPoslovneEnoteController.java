@@ -10,21 +10,21 @@ public class TransakcijskiRacunPoslovneEnoteController {
 
     // service
 
-    private final String x_VIEW = "";
-    private final String x_LIST_VIEW = "";
+    private final String T_RACUNI_ENOTE_VIEW = "transakcijskiRacuniposlovneEnoteView";
+    private final String T_RACUNI_ENOTE_LIST_VIEW = "transakcijskiRacuniposlovneEnoteListView";
 
     @RequestMapping(value = "get", method = RequestMethod.POST)
     public String getView() {
-        return x_VIEW;
+        return T_RACUNI_ENOTE_VIEW;
     }
 
     @RequestMapping(value = "getEntity", method = RequestMethod.POST)
     public String getEntity() {
-        return x_VIEW;
+        return T_RACUNI_ENOTE_VIEW;
     }
 
     @RequestMapping(value = "getList", method = RequestMethod.GET)
     public String getList() {
-        return x_LIST_VIEW;
+        return T_RACUNI_ENOTE_LIST_VIEW;
     }
 }

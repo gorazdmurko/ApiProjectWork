@@ -10,21 +10,21 @@ public class ObjektiController {
 
     // service
 
-    private final String x_VIEW = "";
-    private final String x_LIST_VIEW = "";
+    private final String OBJEKTI_VIEW = "objektiView";
+    private final String OBJEKTI_LIST_VIEW = "objektiListView";
 
     @RequestMapping(value = "get", method = RequestMethod.POST)
     public String getView() {
-        return x_VIEW;
+        return OBJEKTI_VIEW;
     }
 
     @RequestMapping(value = "getEntity", method = RequestMethod.POST)
     public String getEntity() {
-        return x_VIEW;
+        return OBJEKTI_VIEW;
     }
 
     @RequestMapping(value = "getList", method = RequestMethod.GET)
     public String getList() {
-        return x_LIST_VIEW;
+        return OBJEKTI_LIST_VIEW;
     }
 }

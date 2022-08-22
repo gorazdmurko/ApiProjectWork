@@ -10,21 +10,21 @@ public class IzdelkiStoritveSobeController {
 
     // service
 
-    private final String x_VIEW = "";
-    private final String x_LIST_VIEW = "";
+    private final String STORITVE_SOBE_VIEW = "izdelkiStoritveSobeView";
+    private final String STORITVE_SOBE_LIST_VIEW = "izdelkiStoritveSobeListView";
 
     @RequestMapping(value = "get", method = RequestMethod.POST)
     public String getView() {
-        return x_VIEW;
+        return STORITVE_SOBE_VIEW;
     }
 
     @RequestMapping(value = "getEntity", method = RequestMethod.POST)
     public String getEntity() {
-        return x_VIEW;
+        return STORITVE_SOBE_VIEW;
     }
 
     @RequestMapping(value = "getList", method = RequestMethod.GET)
     public String getList() {
-        return x_LIST_VIEW;
+        return STORITVE_SOBE_LIST_VIEW;
     }
 }

@@ -11,21 +11,21 @@ public class IzdaniRacuniController {
 
     // service
 
-    private final String x_VIEW = "";
-    private final String x_LIST_VIEW = "";
+    private final String IZDANI_RACUNI_VIEW = "izdaniRacuniView";
+    private final String IZDANI_RACUNI_LIST_VIEW = "izdaniRacuniListViev";
 
     @RequestMapping(value = "get", method = RequestMethod.POST)
     public String getView() {
-        return x_VIEW;
+        return IZDANI_RACUNI_VIEW;
     }
 
     @RequestMapping(value = "getEntity", method = RequestMethod.POST)
     public String getEntity() {
-        return x_VIEW;
+        return IZDANI_RACUNI_VIEW;
     }
 
     @RequestMapping(value = "getList", method = RequestMethod.GET)
     public String getList() {
-        return x_LIST_VIEW;
+        return IZDANI_RACUNI_LIST_VIEW;
     }
 }
