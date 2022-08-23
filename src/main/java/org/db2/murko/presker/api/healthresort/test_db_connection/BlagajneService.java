@@ -1,4 +1,4 @@
-package org.db2.murko.presker.api.healthresort.test;
+package org.db2.murko.presker.api.healthresort.test_db_connection;
 
 import org.db2.murko.presker.api.healthresort.entity.Blagajne;
 
@@ -8,6 +8,13 @@ import java.util.List;
 
 public class BlagajneService {
 
+    private static Connection connection;
+    public static final String DB_NAME = "health_resort";
+    public static final String DB_PROPERTIES = "?user=postgres&password=postgres&ssl=false";
+    // https://jdbc.postgresql.org/documentation/80/connect.html
+    public static final String CONNECTION_STRING = "jdbc:postgresql://localhost:5432/" + DB_NAME + DB_PROPERTIES;
+
+    // MAIN
     public static void main(String[] args) {
 
         BlagajneService datasource = new BlagajneService();
@@ -35,13 +42,6 @@ public class BlagajneService {
         datasource.close();
     }
 
-    public static final String DB_NAME = "health_resort";
-    public static final String DB_PROPERTIES = "?user=postgres&password=postgres&ssl=false";
-    // https://jdbc.postgresql.org/documentation/80/connect.html
-    public static final String CONNECTION_STRING = "jdbc:postgresql://localhost:5432/" + DB_NAME + DB_PROPERTIES;
-
-
-    private static Connection connection;
 
     // open method
     public boolean open() {
@@ -65,7 +65,7 @@ public class BlagajneService {
         }
     }
 
-
+    // fetch from DB
     public static List<Blagajne> getBlagajne() {
         StringBuilder sb = new StringBuilder("SELECT * FROM ");     // select * from blagajne
         sb.append("blagajne");

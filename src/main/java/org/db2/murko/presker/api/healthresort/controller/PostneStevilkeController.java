@@ -44,7 +44,7 @@ public class PostneStevilkeController {
     }
 
     @RequestMapping(value = "/getList", method = RequestMethod.GET)
-    public String getStevilkaList(ModelMap model) {
+    public String getList(ModelMap model) {
         List<PostneStevilke> list = service.getAll();
         System.out.println("List of PostneStevilke: " + list);
         model.addAttribute("stevilke", list);
