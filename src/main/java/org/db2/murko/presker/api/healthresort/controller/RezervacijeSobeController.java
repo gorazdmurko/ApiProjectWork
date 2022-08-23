@@ -1,6 +1,5 @@
 package org.db2.murko.presker.api.healthresort.controller;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.db2.murko.presker.api.healthresort.entity.RezervacijeSobe;
 import org.db2.murko.presker.api.healthresort.services.IRezervacijeSobeService;
 import org.springframework.beans.factory.annotation.Autowired;

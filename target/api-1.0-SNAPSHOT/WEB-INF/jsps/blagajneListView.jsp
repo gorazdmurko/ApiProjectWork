@@ -35,7 +35,9 @@
     <div>
         <button:buttonHome />
         <div>
-            <form:form action="/ApiProjectWork/blagajna/get">
+            <c:set var="url" value="blagajna" />
+            ${url}
+            <form:form action="/ApiProjectWork/${url}/get">
                 <input type="submit" value="BACK" class="inputButton" />
             </form:form>
         </div>

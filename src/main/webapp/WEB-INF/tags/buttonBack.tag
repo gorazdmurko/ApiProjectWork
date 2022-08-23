@@ -5,7 +5,7 @@
 <html>
     <body>
         <div>
-            <form:form action="/ApiProjectWork" method="get">
+            <form:form action="/ApiProjectWork/blagajna/get">
                 <input type="submit" value="BACK" class="inputButton" />
             </form:form>
         </div>

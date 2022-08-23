@@ -60,5 +60,4 @@
 
 <style>
     <%@ include file="/WEB-INF/static/css/global.css" %>
-
 </style>

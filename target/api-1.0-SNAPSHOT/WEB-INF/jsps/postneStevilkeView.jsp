@@ -29,7 +29,7 @@
 </div>
 <br />
 <div>
-    <form action="getList", method="post">
+    <form action="getList", method="get">
         <label for="getAll" name="getAll">GET ALL</label>
         <input type="submit" id="getAll" value="GET ALL">
     </form>
