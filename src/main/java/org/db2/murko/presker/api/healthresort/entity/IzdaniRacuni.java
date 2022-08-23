@@ -1,5 +1,6 @@
 package org.db2.murko.presker.api.healthresort.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -15,8 +16,10 @@ public class IzdaniRacuni {
     private int id_poslovne_enote;
     private int id_blagajne;
     private int id_zaposleni;
-    private String ZOI;
-    private String EOR;
+    // @Column(name = "\"ZOI\"")
+    private String zoi;
+    // @Column(name = "\"EOR\"")
+    private String eor;
     private int id_transakcijski_racuni_poslovne_enote;
     private int id_rezervacije;
 
@@ -68,20 +71,20 @@ public class IzdaniRacuni {
         this.id_zaposleni = id_zaposleni;
     }
 
-    public String getZOI() {
-        return ZOI;
+    public String getZoi() {
+        return zoi;
     }
 
-    public void setZOI(String ZOI) {
-        this.ZOI = ZOI;
+    public void setZoi(String zoi) {
+        this.zoi = zoi;
     }
 
-    public String getEOR() {
-        return EOR;
+    public String getEor() {
+        return eor;
     }
 
-    public void setEOR(String EOR) {
-        this.EOR = EOR;
+    public void setEor(String eor) {
+        this.eor = eor;
     }
 
     public int getId_transakcijski_racuni_poslovne_enote() {
@@ -109,8 +112,8 @@ public class IzdaniRacuni {
                 ", id_poslovne_enote=" + id_poslovne_enote +
                 ", id_blagajne=" + id_blagajne +
                 ", id_zaposleni=" + id_zaposleni +
-                ", ZOI='" + ZOI + '\'' +
-                ", EOR='" + EOR + '\'' +
+                ", ZOI='" + zoi + '\'' +
+                ", EOR='" + eor + '\'' +
                 ", id_transakcijski_racuni_poslovne_enote=" + id_transakcijski_racuni_poslovne_enote +
                 ", id_rezervacije=" + id_rezervacije +
                 '}';

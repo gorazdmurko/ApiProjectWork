@@ -29,7 +29,7 @@
 </div>
 <br />
 <div>
-    <form action="getEnotaList", method="post">
+    <form action="getEnotaList", method="get">
         <label for="getAll" name="getAll">GET ALL</label>
         <input type="submit" id="getAll" value="GET ALL">
     </form>

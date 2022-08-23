@@ -2,6 +2,7 @@ package org.db2.murko.presker.api.healthresort.controller;
 
 import org.db2.murko.presker.api.healthresort.entity.Kategorije;
 import org.db2.murko.presker.api.healthresort.services.IKategorijeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,20 +12,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "kategorije")
+@RequestMapping(value = "/kategorije")
 public class KategorijeController {
 
+    @Autowired
     private IKategorijeService service;
 
     private final String KATEGORIJE_VIEW = "kategorijeView";
     private final String KATEGORIJE_LIST_VIEW = "kategorijeListView";
 
-    @RequestMapping(value = "get", method = RequestMethod.POST)
+    @RequestMapping(value = "/get", method = RequestMethod.POST)
     public String getView() {
         return KATEGORIJE_VIEW;
     }
 
-    @RequestMapping(value = "getEntity", method = RequestMethod.POST)
+    @RequestMapping(value = "/getEntity", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap model) {
         Kategorije kategorija = service.get(id);
         if (kategorija != null) {
@@ -40,7 +42,7 @@ public class KategorijeController {
         return KATEGORIJE_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getList(ModelMap model) {
         List<Kategorije> list = service.getAll();
         model.addAttribute("kategorije", list);

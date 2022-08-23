@@ -26,7 +26,7 @@ public class PoslovneEnoteController {
         return ENOTE_VIEW;
     }
 
-    @RequestMapping(value = "/getEnota", method = RequestMethod.POST)
+    @RequestMapping(value = "/getEnota", method = RequestMethod.GET)
     public String getEntity(@RequestParam("id") int id, ModelMap model) {
         PoslovneEnote enota = service.getEnota(id);
 
@@ -45,7 +45,7 @@ public class PoslovneEnoteController {
         return ENOTE_VIEW;
     }
 
-    @RequestMapping(value = "/getEnotaList", method = RequestMethod.POST)
+    @RequestMapping(value = "/getEnotaList", method = RequestMethod.GET)
     public String getEnotaList(ModelMap model) {
         List<PoslovneEnote> enote = service.getEnoteAll();
         System.out.println("List of Enote: " + enote);

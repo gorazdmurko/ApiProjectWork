@@ -26,7 +26,7 @@ public class DodatneStoritvePostavkeController {
         return DODATNE_STORITVE_VIEW;
     }
 
-    @RequestMapping(value = "getEntity", method = RequestMethod.POST)
+    @RequestMapping(value = "/getEntity", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap model) {
         DodatneStoritvePostavke storitev = service.get(id);
 
@@ -47,7 +47,7 @@ public class DodatneStoritvePostavkeController {
         return DODATNE_STORITVE_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getList(ModelMap modelMap) {
 
         List<DodatneStoritvePostavke> list = service.getAll();

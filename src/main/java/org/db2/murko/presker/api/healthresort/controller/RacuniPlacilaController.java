@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "racuni-placila")
+@RequestMapping(value = "/racuni-placila")
 public class RacuniPlacilaController {
 
     @Autowired
@@ -21,12 +21,12 @@ public class RacuniPlacilaController {
     private final String RACUNI_PLACILA_VIEW = "racuniPlacilaView";
     private final String RACUNI_PLACILA_LIST_VIEW = "racuniPlacilaListView";
 
-    @RequestMapping(value = "get", method = RequestMethod.POST)
+    @RequestMapping(value = "/get", method = RequestMethod.POST)
     public String getView() {
         return RACUNI_PLACILA_VIEW;
     }
 
-    @RequestMapping(value = "getEntity", method = RequestMethod.POST)
+    @RequestMapping(value = "/getEntity", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap model) {
         RacuniPlacila racun = service.get(id);
         if (racun != null) {
@@ -42,7 +42,7 @@ public class RacuniPlacilaController {
         return RACUNI_PLACILA_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getList(ModelMap model) {
         List<RacuniPlacila> list = service.getAll();
         model.addAttribute("racuni", list);

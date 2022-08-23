@@ -20,7 +20,7 @@
 <testViewTag:testView />
 
 <div>
-    <form:form action="/getEntity" method="post">
+    <form:form action="getEntity" method="post">
         <label for="id">ID blagajne</label>
         <input type="number" id="id" name="id" />
         <input type="submit" value="FETCH" />
@@ -29,13 +29,13 @@
 </div>
 <br />
 <div>
-    <form:form action="/getList" method="post">
+    <form:form action="getList" method="get">
         <label for="getAll" name="getAll">GET ALL</label>
         <input type="submit" id="getAll" value="GET ALL">
     </form:form>
 </div>
 <div>
-    <form:form action="/ApiProjectWork" method="get">
+    <form:form action="ApiProjectWork" method="get">
         <input type="submit" value="HOME" class="inputButton" />
     </form:form>
 </div>

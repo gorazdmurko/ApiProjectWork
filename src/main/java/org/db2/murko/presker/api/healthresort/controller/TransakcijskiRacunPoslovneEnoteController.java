@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "transakcijski-racuni-enote")
+@RequestMapping(value = "/transakcijski-racuni-enote")
 public class TransakcijskiRacunPoslovneEnoteController {
 
     @Autowired
@@ -26,7 +26,7 @@ public class TransakcijskiRacunPoslovneEnoteController {
         return T_RACUNI_ENOTE_VIEW;
     }
 
-    @RequestMapping(value = "getEntity", method = RequestMethod.POST)
+    @RequestMapping(value = "/getEntity", method = RequestMethod.GET)
     public String getEntity(@RequestParam("id") int id, ModelMap modelMap) {
         TransakcijskiRacunPoslovneEnote enota = service.get(id);
         if (enota != null) {
@@ -42,7 +42,7 @@ public class TransakcijskiRacunPoslovneEnoteController {
         return T_RACUNI_ENOTE_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getList(ModelMap model) {
         List<TransakcijskiRacunPoslovneEnote> list = service.getAll();
         model.addAttribute("enote", list);

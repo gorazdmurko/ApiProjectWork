@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
-@RequestMapping(value = "kontakti")
+@RequestMapping(value = "/kontakti")
 public class PPKontaktiController {
 
     @Autowired
@@ -19,7 +21,7 @@ public class PPKontaktiController {
     private final String KONTAKTI_VIEW = "ppKontaktiView";
     private final String KONTAKTI_LIST_VIEW = "ppKontaktiListView";
 
-    @RequestMapping(value = "get", method = RequestMethod.POST)
+    @RequestMapping(value = "/get", method = RequestMethod.POST)
     public String getView() {
         return KONTAKTI_VIEW;
     }
@@ -29,7 +31,7 @@ public class PPKontaktiController {
         PPKontakti kontakt = service.get(id);
         if (kontakt != null) {
             kontakt.toString();
-            model.addAttribute("id_kontakti", kontakt.getId_pp_kontakti());
+            model.addAttribute("id_kontakti", kontakt.getId_pp_kontaki());
             model.addAttribute("tel", kontakt.getTelefon());
             model.addAttribute("e-naslov", kontakt.getEnaslov());
             model.addAttribute("id_osebe", kontakt.getId_osebe());
@@ -40,8 +42,10 @@ public class PPKontaktiController {
         return KONTAKTI_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getList(ModelMap model) {
+        List<PPKontakti> list = service.getAll();
+        model.addAttribute("pp_kontakti", list);
         return KONTAKTI_LIST_VIEW;
     }
 

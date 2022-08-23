@@ -34,7 +34,7 @@ public class OddelkiController {
             model.addAttribute("id_oddelka", oddelek.getId_oddelki());
             model.addAttribute("naziv", oddelek.getOddelek_naziv());
             model.addAttribute("ste_oddelka", oddelek.getStevilka_oddelka());
-            model.addAttribute("id_pos_en_zdr", oddelek.getId_poslovne_enote_zdravilisca());
+            model.addAttribute("id_pos_en_zdr", oddelek.getId_poslovne_enote_zdravilisce());
             model.addAttribute("tel", oddelek.getTelefon());
             model.addAttribute("opis", oddelek.getOpis());
             model.addAttribute("id_pp_zun_izv", oddelek.getId_pp_zunanji_izvajalec());

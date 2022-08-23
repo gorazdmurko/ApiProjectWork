@@ -45,7 +45,8 @@
 <div>
     <button:buttonHome />
     <div>
-        <form:form action="/ApiProjectWork/dodatne-storitve-postavke/get">
+        <c:set var="controllerUrl" value="dodatne-storitve-postavke" />
+        <form:form action="/ApiProjectWork/${controllerUrl}/get">
             <input type="submit" value="BACK" class="inputButton" />
         </form:form>
     </div>

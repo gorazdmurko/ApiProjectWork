@@ -27,7 +27,7 @@ public class IzdaniRacuniController {
         return IZDANI_RACUNI_VIEW;
     }
 
-    @RequestMapping(value = "getEntity", method = RequestMethod.POST)
+    @RequestMapping(value = "/getEntity", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap model) {
         IzdaniRacuni racun = service.get(id);
         if (racun != null) {
@@ -38,8 +38,8 @@ public class IzdaniRacuniController {
             model.addAttribute("id_pos_en", racun.getId_poslovne_enote());
             model.addAttribute("id_blagajne", racun.getId_blagajne());
             model.addAttribute("id_zaposleni", racun.getId_zaposleni());
-            model.addAttribute("ZOI", racun.getZOI());
-            model.addAttribute("EOR", racun.getEOR());
+            model.addAttribute("ZOI", racun.getZoi());
+            model.addAttribute("EOR", racun.getEor());
             model.addAttribute("id_tr_rac_pos_en", racun.getId_transakcijski_racuni_poslovne_enote());
             model.addAttribute("id_rezervacije", racun.getId_rezervacije());
         } else {
@@ -48,7 +48,7 @@ public class IzdaniRacuniController {
         return IZDANI_RACUNI_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getList(ModelMap model) {
         List<IzdaniRacuni> racuni = service.getAll();
         System.out.println("List of IzdaniRacuni: " + racuni);

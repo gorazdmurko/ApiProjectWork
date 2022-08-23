@@ -22,12 +22,12 @@ public class IzdaniRacuniPostavkeController {
     private final String RACUNI_POSTAVKE_LIST_VIEW = "izdaniRacuniPostavkeListView";
 
 
-    @RequestMapping(value = "get", method = RequestMethod.POST)
+    @RequestMapping(value = "/get", method = RequestMethod.POST)
     public String getView() {
         return RACUNI_POSTAVKE_VIEW;
     }
 
-    @RequestMapping(value = "getEntity", method = RequestMethod.POST)
+    @RequestMapping(value = "/getEntity", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap model) {
         IzdaniRacuniPostavke postavka = service.get(id);
 
@@ -48,7 +48,7 @@ public class IzdaniRacuniPostavkeController {
         return RACUNI_POSTAVKE_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getList(ModelMap model) {
         List<IzdaniRacuniPostavke> list = service.getAll();
         System.out.println("List of IzdaniRacuniPostavke: " + list);

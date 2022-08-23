@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "davcne-stopnje")
+@RequestMapping(value = "/davcne-stopnje")
 public class DavcneStopnjeController {
 
     @Autowired
@@ -43,7 +43,7 @@ public class DavcneStopnjeController {
         return DAVCNE_STOPNJE_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getDrzavaList(ModelMap model) {
         List<DavcneStopnje> list = service.getAll();
         model.addAttribute("stopnje", list);

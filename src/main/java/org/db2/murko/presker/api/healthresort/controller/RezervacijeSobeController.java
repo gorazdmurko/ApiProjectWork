@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "rezervacije-sobe")
+@RequestMapping(value = "/rezervacije-sobe")
 public class RezervacijeSobeController {
 
     @Autowired
@@ -26,7 +26,7 @@ public class RezervacijeSobeController {
         return SOBE_VIEW;
     }
 
-    @RequestMapping(value = "getEntity", method = RequestMethod.POST)
+    @RequestMapping(value = "/getEntity", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap modelMap) {
         RezervacijeSobe soba = service.get(id);
         if (soba != null) {
@@ -34,15 +34,15 @@ public class RezervacijeSobeController {
             modelMap.addAttribute("id_rez_sobe", soba.getId_rezervacije_sobe());
             modelMap.addAttribute("id_rez", soba.getId_rezervacije());
             modelMap.addAttribute("id_sobe", soba.getId_sobe());
-            modelMap.addAttribute("od", soba.getDatum_od());
-            modelMap.addAttribute("do", soba.getDatum_do());
+            modelMap.addAttribute("datum_od", soba.getDatum_od());
+            modelMap.addAttribute("datum_do", soba.getDatum_do());
         } else {
             modelMap.addAttribute("error", "Id ne obstaja!");
         }
         return SOBE_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getList(ModelMap modelMap) {
         List<RezervacijeSobe> list = service.getAll();
         modelMap.addAttribute("sobe", list);

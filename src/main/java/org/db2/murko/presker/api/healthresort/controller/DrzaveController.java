@@ -26,7 +26,7 @@ public class DrzaveController {
         return DRZAVA_VIEW;
     }
 
-    @RequestMapping(value = "getDrzava", method = RequestMethod.POST)
+    @RequestMapping(value = "/getDrzava", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap model) {
         Drzave drzava = service.get(id);
 
@@ -42,7 +42,7 @@ public class DrzaveController {
         return DRZAVA_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getDrzavaList(ModelMap model) {
         List<Drzave> list = service.getAll();
         model.addAttribute("drzave", list);

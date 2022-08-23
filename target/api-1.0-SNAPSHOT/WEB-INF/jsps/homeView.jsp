@@ -40,14 +40,14 @@
     </div>
 
     <div>
-        <form:form action="poslovne_enote/get" method="post">
-            <input type="submit" name="getPoslovneEnote" value="POSLOVNE ENOTE" class="inputButton">
+        <form:form action="davcne-stopnje/get" method="post">
+            <input type="submit" name="getDavcnaStopnja" value="DAVCNA STOPNJA" class="inputButton">
         </form:form>
     </div>
 
     <div>
-        <form:form action="postne_stevilke/get" method="post">
-            <input type="submit" name="getPostneStevilke" value="POSTNE STEVILKE" class="inputButton">
+        <form:form action="dodatne-storitve-postavke/get" method="post">
+            <input type="submit" name="getDodatneStoritve" value="DODATNE STORITVE POSTAVKE" class="inputButton">
         </form:form>
     </div>
 
@@ -58,17 +58,148 @@
     </div>
 
     <div>
-        <form:form action="davcne-stopnje/get" method="post">
-            <input type="submit" name="getDavcnaStopnja" value="DAVCNA STOPNJA" class="inputButton">
+        <form:form action="izdani-racuni/get" method="post">
+            <input type="submit" name="get" value="IZDANI RACUNI" class="inputButton">
         </form:form>
     </div>
 
     <div>
-        <form:form action="dodatne-storitve-postavke/get" method="post">
-            <input type="submit" name="getDodatneStoritve" value="DODATNE STORITVE" class="inputButton">
+        <form:form action="izdani-racuni-postavke/get" method="post">
+            <input type="submit" name="get" value="IZDANI RACUNI POSTAVKE" class="inputButton">
         </form:form>
     </div>
 
+    <div>
+        <form:form action="izdelki-storitve/get" method="post">
+            <input type="submit" name="get" value="IZDELKI STORITVE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="izdelki-storitve-sobe/get" method="post">
+            <input type="submit" name="get" value="IZDELKI STORITVE SOBE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="kategorije/get" method="post">
+            <input type="submit" name="get" value="KATEGORIJE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="objekti/get" method="post">
+            <input type="submit" name="get" value="OBJEKTI" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="oddelki/get" method="post">
+            <input type="submit" name="get" value="ODDELKI" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="osebe/get" method="post">
+            <input type="submit" name="get" value="OSEBE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="paketi-pozicije/get" method="post">
+            <input type="submit" name="get" value="PAKETI POZICIJE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="poslovne_enote/get" method="post">
+            <input type="submit" name="getPoslovneEnote" value="POSLOVNE ENOTE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="poslovni-partnerji/get" method="post">
+            <input type="submit" name="get" value="POSLOVNI PARTNERJI" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="postne_stevilke/get" method="post">
+            <input type="submit" name="getPostneStevilke" value="POSTNE STEVILKE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="kontakti/get" method="post">
+            <input type="submit" name="get" value="PP KONTAKTI" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="racuni-placila/get" method="post">
+            <input type="submit" name="get" value="RACUNI PLACILA" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="rezervacije/get" method="post">
+            <input type="submit" name="get" value="REZERVACIJE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="rezervacije-dodatne-storitve/get" method="post">
+            <input type="submit" name="get" value="REZERVACIJE DODATNE STORITVE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="rezervacije-pozicije/get" method="post">
+            <input type="submit" name="get" value="REZERVACIJE POZICIJE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="rezervacije-sobe/get" method="post">
+            <input type="submit" name="get" value="REZERVACIJE SOBE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="sobe/get" method="post">
+            <input type="submit" name="get" value="SOBE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="sobe-statusi/get" method="post">
+            <input type="submit" name="get" value="SOBE STATUSI" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="transakcijski-racuni/get" method="post">
+            <input type="submit" name="get" value="TRANSAKCIJSKI RACUNI" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="transakcijski-racuni-enote/get" method="post">
+            <input type="submit" name="get" value="TR. RACUNI POSL. ENOTE" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="vrste-placil/get" method="post">
+            <input type="submit" name="get" value="VRSTE PLACIL" class="inputButton">
+        </form:form>
+    </div>
+
+    <div>
+        <form:form action="zaposleni/get" method="post">
+            <input type="submit" name="get" value="ZAPOSLENI" class="inputButton">
+        </form:form>
+    </div>
 </body>
 <style>
     /* CSS */

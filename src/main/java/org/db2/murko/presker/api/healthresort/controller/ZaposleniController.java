@@ -17,23 +17,22 @@ public class ZaposleniController {
 
     @Autowired
     private IZaposleniService service;
-
     private final String ZAPOSLENI_VIEW = "zaposleniView";
     private final String ZAPOSLENI_LIST_VIEW = "zaposleniListView";
 
-    @RequestMapping(value = "get", method = RequestMethod.POST)
+    @RequestMapping(value = "/get", method = RequestMethod.POST)
     public String getView() {
         return ZAPOSLENI_VIEW;
     }
 
-    @RequestMapping(value = "getEntity", method = RequestMethod.POST)
+    @RequestMapping(value = "/getEntity", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap modelMap) {
         Zaposleni zaposleni = service.get(id);
         if (zaposleni != null) {
             zaposleni.toString();
             modelMap.addAttribute("id", zaposleni.getId_zaposleni());
-            modelMap.addAttribute("od", zaposleni.getZaposlitev_od());
-            modelMap.addAttribute("do", zaposleni.getZaposlitev_do());
+            modelMap.addAttribute("zap_od", zaposleni.getZaposlitev_od());
+            modelMap.addAttribute("zap_do", zaposleni.getZaposlitev_do());
             modelMap.addAttribute("id_osebe", zaposleni.getId_osebe());
             modelMap.addAttribute("id_pos_en", zaposleni.getId_poslovne_enote());
             modelMap.addAttribute("opis", zaposleni.getOpis());
@@ -43,14 +42,14 @@ public class ZaposleniController {
         return ZAPOSLENI_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getList(ModelMap modelMap) {
         List<Zaposleni> list = service.getAll();
         modelMap.addAttribute("zaposleni", list);
         return ZAPOSLENI_LIST_VIEW;
     }
 
-    @RequestMapping(value = "back")
+    @RequestMapping(value = "/back")
     public String back() {
         return ZAPOSLENI_VIEW;
     }

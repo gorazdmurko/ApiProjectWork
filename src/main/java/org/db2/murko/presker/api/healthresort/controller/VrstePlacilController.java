@@ -17,7 +17,6 @@ public class VrstePlacilController {
 
     @Autowired
     private IVrstePlacilService service;
-
     private final String VRSTE_PLACIL_VIEW = "vrstePlacilView";
     private final String VRSTE_PLACIL_LIST_VIEW = "vrstePlacilListView";
 

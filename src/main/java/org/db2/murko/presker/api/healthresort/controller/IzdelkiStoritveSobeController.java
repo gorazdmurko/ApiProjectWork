@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "izdelki-storitve-sobe")
+@RequestMapping(value = "/izdelki-storitve-sobe")
 public class IzdelkiStoritveSobeController {
 
     @Autowired
@@ -21,12 +21,12 @@ public class IzdelkiStoritveSobeController {
     private final String STORITVE_SOBE_VIEW = "izdelkiStoritveSobeView";
     private final String STORITVE_SOBE_LIST_VIEW = "izdelkiStoritveSobeListView";
 
-    @RequestMapping(value = "get", method = RequestMethod.POST)
+    @RequestMapping(value = "/get", method = RequestMethod.POST)
     public String getView() {
         return STORITVE_SOBE_VIEW;
     }
 
-    @RequestMapping(value = "getEntity", method = RequestMethod.POST)
+    @RequestMapping(value = "/getEntity", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap model) {
         IzdelkiStoritveSobe soba = service.get(id);
         if (soba != null) {
@@ -41,7 +41,7 @@ public class IzdelkiStoritveSobeController {
         return STORITVE_SOBE_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getList(ModelMap model) {
         List<IzdelkiStoritveSobe> list = service.getAll();
         model.addAttribute("sobe", list);

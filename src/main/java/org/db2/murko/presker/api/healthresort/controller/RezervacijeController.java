@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "rezervacije")
+@RequestMapping(value = "/rezervacije")
 public class RezervacijeController {
 
     @Autowired
@@ -21,12 +21,12 @@ public class RezervacijeController {
     private final String REZERVACIJE_VIEW = "rezervacijeView";
     private final String REZERVACIJE_LIST_VIEW = "rezervacijeListView";
 
-    @RequestMapping(value = "get", method = RequestMethod.POST)
+    @RequestMapping(value = "/get", method = RequestMethod.POST)
     public String getView() {
         return REZERVACIJE_VIEW;
     }
 
-    @RequestMapping(value = "getEntity", method = RequestMethod.POST)
+    @RequestMapping(value = "/getEntity", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap model) {
         Rezervacije rezervacija = service.get(id);
         if (rezervacija != null) {
@@ -45,7 +45,7 @@ public class RezervacijeController {
         return REZERVACIJE_VIEW;
     }
 
-    @RequestMapping(value = "getList", method = RequestMethod.GET)
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     public String getList(ModelMap modelMap) {
         List<Rezervacije> list = service.getAll();
         modelMap.addAttribute("rezervacije", list);

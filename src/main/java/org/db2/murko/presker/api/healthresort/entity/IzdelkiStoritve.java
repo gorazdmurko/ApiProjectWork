@@ -19,7 +19,7 @@ public class IzdelkiStoritve {
     private Boolean paket;
     private String opis;
     private int id_pp_zunanji_izvajalec;
-    private Boolean zunanje_storitve;
+    private Boolean zunanja_storitev;
 
     public int getId_izdelki_storitve() {
         return id_izdelki_storitve;
@@ -101,12 +101,12 @@ public class IzdelkiStoritve {
         this.id_pp_zunanji_izvajalec = id_pp_zunanji_izvajalec;
     }
 
-    public Boolean getZunanje_storitve() {
-        return zunanje_storitve;
+    public Boolean getZunanja_storitev() {
+        return zunanja_storitev;
     }
 
-    public void setZunanje_storitve(Boolean zunanje_storitve) {
-        this.zunanje_storitve = zunanje_storitve;
+    public void setZunanja_storitev(Boolean zunanja_storitev) {
+        this.zunanja_storitev = zunanja_storitev;
     }
 
     @Override
@@ -122,7 +122,7 @@ public class IzdelkiStoritve {
                 ", paket=" + paket +
                 ", opis='" + opis + '\'' +
                 ", id_pp_zunanji_izvajalec=" + id_pp_zunanji_izvajalec +
-                ", zunanje_storitve=" + zunanje_storitve +
+                ", zunanje_storitve=" + zunanja_storitev +
                 '}';
     }
 }

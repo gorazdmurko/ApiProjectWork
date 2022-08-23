@@ -12,7 +12,7 @@ public class Oddelki {
     private int id_oddelki;
     private String oddelek_naziv;
     private String stevilka_oddelka;
-    private int id_poslovne_enote_zdravilisca;
+    private int id_poslovne_enote_zdravilisce;
     private String telefon;
     private String opis;
     private int id_pp_zunanji_izvajalec;
@@ -41,12 +41,12 @@ public class Oddelki {
         this.stevilka_oddelka = stevilka_oddelka;
     }
 
-    public int getId_poslovne_enote_zdravilisca() {
-        return id_poslovne_enote_zdravilisca;
+    public int getId_poslovne_enote_zdravilisce() {
+        return id_poslovne_enote_zdravilisce;
     }
 
-    public void setId_poslovne_enote_zdravilisca(int id_poslovne_enote_zdravilisca) {
-        this.id_poslovne_enote_zdravilisca = id_poslovne_enote_zdravilisca;
+    public void setId_poslovne_enote_zdravilisce(int id_poslovne_enote_zdravilisce) {
+        this.id_poslovne_enote_zdravilisce = id_poslovne_enote_zdravilisce;
     }
 
     public String getTelefon() {
@@ -79,7 +79,7 @@ public class Oddelki {
                 "id_oddelki=" + id_oddelki +
                 ", oddelek_naziv='" + oddelek_naziv + '\'' +
                 ", stevilka_oddelka='" + stevilka_oddelka + '\'' +
-                ", id_poslovne_enote_zdravilisca=" + id_poslovne_enote_zdravilisca +
+                ", id_poslovne_enote_zdravilisca=" + id_poslovne_enote_zdravilisce +
                 ", telefon='" + telefon + '\'' +
                 ", opis='" + opis + '\'' +
                 ", id_pp_zunanji_izvajalec=" + id_pp_zunanji_izvajalec +

@@ -5,22 +5,22 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "pp_kontakti")
+@Table(name = "pp_kontaki")
 public class PPKontakti {
 
     @Id
-    private int id_pp_kontakti;
+    private int id_pp_kontaki;
     private String telefon;
     private String enaslov;
     private int id_osebe;
     private int id_poslovni_partnerji;
 
-    public int getId_pp_kontakti() {
-        return id_pp_kontakti;
+    public int getId_pp_kontaki() {
+        return id_pp_kontaki;
     }
 
-    public void setId_pp_kontakti(int id_pp_kontakti) {
-        this.id_pp_kontakti = id_pp_kontakti;
+    public void setId_pp_kontaki(int id_pp_kontaki) {
+        this.id_pp_kontaki = id_pp_kontaki;
     }
 
     public String getTelefon() {
@@ -58,7 +58,7 @@ public class PPKontakti {
     @Override
     public String toString() {
         return "PPKontakti{" +
-                "id_pp_kontakti=" + id_pp_kontakti +
+                "id_pp_kontakti=" + id_pp_kontaki +
                 ", telefon='" + telefon + '\'' +
                 ", enaslov='" + enaslov + '\'' +
                 ", id_osebe=" + id_osebe +

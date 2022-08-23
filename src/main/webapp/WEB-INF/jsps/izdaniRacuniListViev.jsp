@@ -38,8 +38,8 @@
             <td>${racun.id_poslovne_enote}</td>
             <td>${racun.id_blagajne}</td>
             <td>${racun.id_zaposleni}</td>
-            <td>${racun.ZOI}</td>
-            <td>${racun.EOR}</td>
+            <td>${racun.zoi}</td>
+            <td>${racun.eor}</td>
             <td>${racun.id_transakcijski_racuni_poslovne_enote}</td>
             <td>${racun.id_rezervacije}</td>
         </tr>

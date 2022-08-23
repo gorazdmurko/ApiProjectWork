@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "transakcijski_racun_poslovne_enote")
+@Table(name = "transakcijski_racuni_poslovne_enote")
 public class TransakcijskiRacunPoslovneEnote {
 
     @Id

@@ -37,7 +37,8 @@
 <div>
     <button:buttonHome />
     <div>
-        <form:form action="/ApiProjectWork/davcne-stopnje/get">
+        <c:set var="controllerUrl" value="davcne-stopnje" />
+        <form:form action="/ApiProjectWork/${controllerUrl}/get">
             <input type="submit" value="BACK" class="inputButton" />
         </form:form>
     </div>
