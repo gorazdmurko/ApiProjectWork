@@ -7,13 +7,20 @@
     height: 5vh;
     width: 10vw;
     min-width: 200px;
-    border-radius: 2vh;
+    border: 2px solid white;
+    border-radius: 1.2vh;
     color: red;
     font-weight: bold;
     background-color: skyblue;
     margin: 1vh;
     padding: 1px;
     cursor: pointer;
+}
+
+.inputButton:hover {
+    opacity: 40%;
+    color: black;
+    background-color: aliceblue;
 }
 
 table {

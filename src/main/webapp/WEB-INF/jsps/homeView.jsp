@@ -31,172 +31,184 @@
 <!-- BODY -->
 <body class="body">
 
-    <homeView:home />
+    <homeView:allEntities />
 
     <div class="grid_container">
         <div class="grid_item grid_item_1">
             <form:form action="blagajna/get" method="post">
-                <input type="submit" name="getBlagajne" value="BLAGAJNE" class="inputButton">
+                <input type="submit" name="get" value="BLAGAJNE" class="inputButton">
             </form:form>
         </div>
 
         <div class="grid_item grid_item_2">
             <form:form action="davcne-stopnje/get" method="post">
-                <input type="submit" name="getDavcnaStopnja" value="DAVCNA STOPNJA" class="inputButton">
+                <input type="submit" name="get" value="DAVCNA STOPNJA" class="inputButton">
             </form:form>
         </div>
 
         <div class="grid_item grid_item_3">
             <form:form action="dodatne-storitve-postavke/get" method="post">
-                <input type="submit" name="getDodatneStoritve" value="DODATNE STORITVE POSTAVKE" class="inputButton">
+                <input type="submit" name="get" value="DODATNE STOR. POSTAVKE" class="inputButton">
             </form:form>
         </div>
 
         <div class="grid_item grid_item_4">
-            <form:form action="drzava/get" method="post">
-                <input type="submit" name="getDrzava" value="DRZAVE" class="inputButton">
+            <form:form action="dnevnik-blagajne/get" method="post">
+                <input type="submit" name="get" value=" DNEVNIK BLAGAJNE" class="inputButton">
             </form:form>
         </div>
 
         <div class="grid_item grid_item_5">
+            <form:form action="drzava/get" method="post">
+                <input type="submit" name="get" value="DRZAVE" class="inputButton">
+            </form:form>
+        </div>
+
+        <div class="grid_item grid_item_6">
             <form:form action="izdani-racuni/get" method="post">
                 <input type="submit" name="get" value="IZDANI RACUNI" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_6">
+        <div class="grid_item grid_item_7">
             <form:form action="izdani-racuni-postavke/get" method="post">
                 <input type="submit" name="get" value="IZDANI RACUNI POSTAVKE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_7">
+        <div class="grid_item grid_item_8">
             <form:form action="izdelki-storitve/get" method="post">
                 <input type="submit" name="get" value="IZDELKI STORITVE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_8">
+        <div class="grid_item grid_item_9">
             <form:form action="izdelki-storitve-sobe/get" method="post">
                 <input type="submit" name="get" value="IZDELKI STORITVE SOBE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_9">
+        <div class="grid_item grid_item_10">
             <form:form action="kategorije/get" method="post">
                 <input type="submit" name="get" value="KATEGORIJE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_10">
+        <div class="grid_item grid_item_11">
             <form:form action="objekti/get" method="post">
                 <input type="submit" name="get" value="OBJEKTI" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_11">
+        <div class="grid_item grid_item_12">
             <form:form action="oddelki/get" method="post">
                 <input type="submit" name="get" value="ODDELKI" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_12">
+        <div class="grid_item grid_item_13">
             <form:form action="osebe/get" method="post">
                 <input type="submit" name="get" value="OSEBE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_13">
+        <div class="grid_item grid_item_14">
             <form:form action="paketi-pozicije/get" method="post">
                 <input type="submit" name="get" value="PAKETI POZICIJE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_14">
+        <div class="grid_item grid_item_15">
             <form:form action="poslovne_enote/get" method="post">
                 <input type="submit" name="getPoslovneEnote" value="POSLOVNE ENOTE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_15">
+        <div class="grid_item grid_item_16">
             <form:form action="poslovni-partnerji/get" method="post">
                 <input type="submit" name="get" value="POSLOVNI PARTNERJI" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_16">
+        <div class="grid_item grid_item_17">
             <form:form action="postne_stevilke/get" method="post">
                 <input type="submit" name="getPostneStevilke" value="POSTNE STEVILKE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_17">
+        <div class="grid_item grid_item_18">
             <form:form action="kontakti/get" method="post">
                 <input type="submit" name="get" value="PP KONTAKTI" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_18">
+        <div class="grid_item grid_item_19">
             <form:form action="racuni-placila/get" method="post">
                 <input type="submit" name="get" value="RACUNI PLACILA" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_19">
+        <div class="grid_item grid_item_20">
             <form:form action="rezervacije/get" method="post">
                 <input type="submit" name="get" value="REZERVACIJE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_20">
+        <div class="grid_item grid_item_21">
+            <form:form action="rezervacije-dnevnik/get" method="post">
+                <input type="submit" name="get" value="REZERVACIJE DNEVNIK" class="inputButton">
+            </form:form>
+        </div>
+
+        <div class="grid_item grid_item_22">
             <form:form action="rezervacije-dodatne-storitve/get" method="post">
                 <input type="submit" name="get" value="REZERVACIJE DODATNE STORITVE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_21">
+        <div class="grid_item grid_item_23">
             <form:form action="rezervacije-pozicije/get" method="post">
                 <input type="submit" name="get" value="REZERVACIJE POZICIJE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_22">
+        <div class="grid_item grid_item_24">
             <form:form action="rezervacije-sobe/get" method="post">
                 <input type="submit" name="get" value="REZERVACIJE SOBE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_23">
+        <div class="grid_item grid_item_25">
             <form:form action="sobe/get" method="post">
                 <input type="submit" name="get" value="SOBE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_24">
+        <div class="grid_item grid_item_26">
             <form:form action="sobe-statusi/get" method="post">
                 <input type="submit" name="get" value="SOBE STATUSI" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_25">
+        <div class="grid_item grid_item_27">
             <form:form action="transakcijski-racuni/get" method="post">
                 <input type="submit" name="get" value="TRANSAKCIJSKI RACUNI" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_26">
+        <div class="grid_item grid_item_28">
             <form:form action="transakcijski-racuni-enote/get" method="post">
                 <input type="submit" name="get" value="TR. RACUNI POSL. ENOTE" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_27">
+        <div class="grid_item grid_item_29">
             <form:form action="vrste-placil/get" method="post">
                 <input type="submit" name="get" value="VRSTE PLACIL" class="inputButton">
             </form:form>
         </div>
 
-        <div class="grid_item grid_item_28">
+        <div class="grid_item grid_item_30">
             <form:form action="zaposleni/get" method="post">
                 <input type="submit" name="get" value="ZAPOSLENI" class="inputButton">
             </form:form>

@@ -38,6 +38,7 @@
             <list>
                 <value>org.db2.murko.presker.api.healthresort.entity.Blagajne</value>
                 <value>org.db2.murko.presker.api.healthresort.entity.DavcneStopnje</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.DnevnikBlagajne</value>
                 <value>org.db2.murko.presker.api.healthresort.entity.DodatneStoritvePostavke</value>
                 <value>org.db2.murko.presker.api.healthresort.entity.Drzave</value>
                 <value>org.db2.murko.presker.api.healthresort.entity.IzdaniRacuni</value>
@@ -55,6 +56,7 @@
                 <value>org.db2.murko.presker.api.healthresort.entity.PPKontakti</value>
                 <value>org.db2.murko.presker.api.healthresort.entity.RacuniPlacila</value>
                 <value>org.db2.murko.presker.api.healthresort.entity.Rezervacije</value>
+                <value>org.db2.murko.presker.api.healthresort.entity.RezervacijeDnevnik</value>
                 <value>org.db2.murko.presker.api.healthresort.entity.RezervacijeDodatneStoritve</value>
                 <value>org.db2.murko.presker.api.healthresort.entity.RezervacijePozicije</value>
                 <value>org.db2.murko.presker.api.healthresort.entity.RezervacijeSobe</value>
