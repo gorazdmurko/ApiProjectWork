@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-    <testViewTag:testView />
+    <testViewTag:blagajne />
 
     <div>
         <form action="getBlagajna", method="post">

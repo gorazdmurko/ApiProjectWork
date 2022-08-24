@@ -16,6 +16,9 @@
     <title>ALL BLAGAJNE</title>
 </head>
 <body class="body">
+<h1 align="center">
+    POSLOVNE ENOTE
+</h1>
 <table style="border: blueviolet" border="1">
     <tr>
         <th style="color: mediumvioletred"> - ID POSLOVNE ENOTE - </th>

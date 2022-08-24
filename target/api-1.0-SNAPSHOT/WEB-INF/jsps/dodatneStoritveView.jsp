@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<testViewTag:testView />
+<testViewTag:dotatne_stor_postavke />
 
 <div>
     <form action="getEntity", method="post">

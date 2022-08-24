@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<testViewTag:testView />
+<testViewTag:davcne_stopnje />
 
 <div>
     <form action="getEntity", method="post">

@@ -26,7 +26,7 @@ public class TransakcijskiRacunPoslovneEnoteController {
         return T_RACUNI_ENOTE_VIEW;
     }
 
-    @RequestMapping(value = "/getEntity", method = RequestMethod.GET)
+    @RequestMapping(value = "/getEntity", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap modelMap) {
         TransakcijskiRacunPoslovneEnote enota = service.get(id);
         if (enota != null) {

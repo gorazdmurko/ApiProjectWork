@@ -26,7 +26,7 @@ public class PoslovneEnoteController {
         return ENOTE_VIEW;
     }
 
-    @RequestMapping(value = "/getEnota", method = RequestMethod.GET)
+    @RequestMapping(value = "/getEnota", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap model) {
         PoslovneEnote enota = service.getEnota(id);
 

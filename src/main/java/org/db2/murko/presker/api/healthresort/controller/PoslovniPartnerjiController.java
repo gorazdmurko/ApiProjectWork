@@ -38,8 +38,6 @@ public class PoslovniPartnerjiController {
             model.addAttribute("dav_ste", partner.getDavcna_stevilka());
             model.addAttribute("mat_ste", partner.getMaticna_stevilka());
             model.addAttribute("naslov", partner.getNaslov());
-            model.addAttribute("e-naslov", partner.getE_naslov());
-            model.addAttribute("telefon", partner.getTelefon());
         } else {
             model.addAttribute("error", "Id ne obstaja");
         }

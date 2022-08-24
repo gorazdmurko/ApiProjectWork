@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlagajneService {
+public class TestBlagajneService {
 
     private static Connection connection;
     public static final String DB_NAME = "health_resort";
@@ -18,7 +18,7 @@ public class BlagajneService {
     // MAIN
     public static void main(String[] args) {
 
-        BlagajneService datasource = new BlagajneService();
+        TestBlagajneService datasource = new TestBlagajneService();
 
         // 1. OPEN DATASOURCE
         if (!datasource.open()) {
@@ -113,7 +113,7 @@ public class BlagajneService {
                 IzdaniRacuni racun = new IzdaniRacuni();
                 racun.setId_izdani_racuni(results.getInt(1));
                 racun.setSt_racuna(results.getFloat(2));
-                racun.setDatum_racuna(results.getLong(3));
+                racun.setDatum_racuna(results.getDate(3));
                 racun.setId_poslovne_enote(results.getInt(4));
                 racun.setId_blagajne(results.getInt(5));
                 racun.setId_zaposleni(results.getInt(6));

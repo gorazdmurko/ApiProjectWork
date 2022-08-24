@@ -3,6 +3,7 @@ package org.db2.murko.presker.api.healthresort.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
 @Entity
 @Table(name = "dodatne_storitve_postavke")
@@ -14,8 +15,8 @@ public class DodatneStoritvePostavke {
     private int id_izdelki_storitve;
     private float kolicina;
     private float popust;
-    private long cas_zacetek;
-    private long cas_konec;
+    private Date cas_zacetek;
+    private Date cas_konec;
     private String opis;
 
     public int getId_dodatne_storitve_postavke() {
@@ -58,19 +59,19 @@ public class DodatneStoritvePostavke {
         this.popust = popust;
     }
 
-    public long getCas_zacetek() {
+    public Date getCas_zacetek() {
         return cas_zacetek;
     }
 
-    public void setCas_zacetek(long cas_zacetek) {
+    public void setCas_zacetek(Date cas_zacetek) {
         this.cas_zacetek = cas_zacetek;
     }
 
-    public long getCas_konec() {
+    public Date getCas_konec() {
         return cas_konec;
     }
 
-    public void setCas_konec(long cas_konec) {
+    public void setCas_konec(Date cas_konec) {
         this.cas_konec = cas_konec;
     }
 

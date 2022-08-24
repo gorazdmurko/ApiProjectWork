@@ -16,6 +16,9 @@
     <title>API</title>
 </head>
 <body class="body">
+<h1 align="center">
+    REZERVACIJE DODATNE STORITVE
+</h1>
 <table style="border: blueviolet" border="1">
     <tr>
         <th style="color: mediumvioletred"> - ID REZ. DODATNE ST. - </th>

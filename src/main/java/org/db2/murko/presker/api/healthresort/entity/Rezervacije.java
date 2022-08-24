@@ -14,7 +14,7 @@ public class Rezervacije {
     private int id_poslovne_enote;
     private int id_osebe_gosti;
     private String stevilka_rezervacije;
-    private long datum_cas;
+    private Date datum_cas;
     private Date datum_prihod;
     private Date datum_odhod;
     private int id_zaposleni;
@@ -51,11 +51,11 @@ public class Rezervacije {
         this.stevilka_rezervacije = stevilka_rezervacije;
     }
 
-    public long getDatum_cas() {
+    public Date getDatum_cas() {
         return datum_cas;
     }
 
-    public void setDatum_cas(long datum_cas) {
+    public void setDatum_cas(Date datum_cas) {
         this.datum_cas = datum_cas;
     }
 

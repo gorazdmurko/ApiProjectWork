@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<testViewTag:testView />
+<testViewTag:poslovni_partnerji />
 
 <div>
     <form:form action="getEntity" method="post">
@@ -40,7 +40,7 @@
     </form:form>
 </div>
 <div>
-    <c:if test="${id != null}">
+    <c:if test="${id_pos_par != null}">
         <table style="border: blueviolet" border="1">
             <tr>
                 <th style="color: mediumvioletred"> - ID POSL. PARTNERJI - </th>
@@ -50,8 +50,6 @@
                 <th style="color: mediumvioletred"> - DAVCNA ST. - </th>
                 <th style="color: mediumvioletred"> - MATICNA ST - </th>
                 <th style="color: mediumvioletred"> - NASLOV - </th>
-                <th style="color: mediumvioletred"> - E-NASLOV - </th>
-                <th style="color: mediumvioletred"> - TELEFON - </th>
             </tr>
             <tr>
                 <td>${id_pos_par}</td>
@@ -61,8 +59,6 @@
                 <td>${dav_ste}</td>
                 <td>${mat_ste}</td>
                 <td>${naslov}</td>
-                <td>${e-naslov}</td>
-                <td>${telefon}</td>
             </tr>
         </table>
     </c:if>

@@ -17,8 +17,6 @@ public class Osebe {
     private String spol;
     private Date datum_rojstva;
     private String naslov;
-    private String enaslov;
-    private String telefon;
     private String davcna_stevilka;
     private int id_postne_stevilke;
 
@@ -78,22 +76,6 @@ public class Osebe {
         this.naslov = naslov;
     }
 
-    public String getEnaslov() {
-        return enaslov;
-    }
-
-    public void setEnaslov(String enaslov) {
-        this.enaslov = enaslov;
-    }
-
-    public String getTelefon() {
-        return telefon;
-    }
-
-    public void setTelefon(String telefon) {
-        this.telefon = telefon;
-    }
-
     public String getDavcna_stevilka() {
         return davcna_stevilka;
     }
@@ -120,8 +102,6 @@ public class Osebe {
                 ", spol='" + spol + '\'' +
                 ", datum_rojstva=" + datum_rojstva +
                 ", naslov='" + naslov + '\'' +
-                ", enaslov='" + enaslov + '\'' +
-                ", telefon='" + telefon + '\'' +
                 ", davcna_stevilka='" + davcna_stevilka + '\'' +
                 ", id_postne_stevilke=" + id_postne_stevilke +
                 '}';

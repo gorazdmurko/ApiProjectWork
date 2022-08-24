@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<testViewTag:testView />
+<testViewTag:vrste_placil />
 
 <div>
     <form:form action="getEntity" method="post">

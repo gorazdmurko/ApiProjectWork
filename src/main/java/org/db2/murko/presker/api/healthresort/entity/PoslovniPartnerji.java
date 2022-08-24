@@ -16,8 +16,6 @@ public class PoslovniPartnerji {
     private String davcna_stevilka;
     private String maticna_stevilka;
     private String naslov;
-    private String e_naslov;
-    private String telefon;
 
     public int getId_poslovni_partnerji() {
         return id_poslovni_partnerji;
@@ -75,22 +73,6 @@ public class PoslovniPartnerji {
         this.naslov = naslov;
     }
 
-    public String getE_naslov() {
-        return e_naslov;
-    }
-
-    public void setE_naslov(String e_naslov) {
-        this.e_naslov = e_naslov;
-    }
-
-    public String getTelefon() {
-        return telefon;
-    }
-
-    public void setTelefon(String telefon) {
-        this.telefon = telefon;
-    }
-
     @Override
     public String toString() {
         return "PoslovniPartnerji{" +
@@ -101,8 +83,6 @@ public class PoslovniPartnerji {
                 ", davcna_stevilka='" + davcna_stevilka + '\'' +
                 ", maticna_stevilka='" + maticna_stevilka + '\'' +
                 ", naslov='" + naslov + '\'' +
-                ", e_naslov='" + e_naslov + '\'' +
-                ", telefon='" + telefon + '\'' +
                 '}';
     }
 }

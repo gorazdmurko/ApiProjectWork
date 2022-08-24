@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<testViewTag:testView />
+<testViewTag:paketi_pozicije />
 
 <div>
     <form:form action="getEntity" method="post">
@@ -40,7 +40,7 @@
     </form:form>
 </div>
 <div>
-    <c:if test="${id != null}">
+    <c:if test="${id_pak_poz != null}">
         <table style="border: blueviolet" border="1">
             <tr>
                 <th style="color: mediumvioletred"> - ID PAKETI POZICIJE - </th>

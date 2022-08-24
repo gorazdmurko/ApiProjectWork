@@ -16,6 +16,9 @@
     <title>API</title>
 </head>
 <body class="body">
+<h1 align="center">
+    POSLOVNI PARTNERJI KONTAKTI
+</h1>
 <table style="border: blueviolet" border="1">
     <tr>
         <th style="color: mediumvioletred"> - ID PP KONTAKTI - </th>
@@ -27,7 +30,7 @@
     <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
     <c:forEach var="pp_kontakt" items="${pp_kontakti}">
         <tr>
-            <td>${pp_kontakt.id_pp_kontakti}</td>
+            <td>${pp_kontakt.id_pp_kontaki}</td>
             <td>${pp_kontakt.telefon}</td>
             <td>${pp_kontakt.enaslov}</td>
             <td>${pp_kontakt.id_osebe}</td>

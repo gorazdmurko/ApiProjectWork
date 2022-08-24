@@ -15,10 +15,10 @@ public class IzdelkiStoritve {
     private float prodajna_cena;
     private int id_kategorije;
     private int id_davcne_stopnje;
-    private int id_pp_proizvajalci;
+    private Integer id_pp_proizvajalci;
     private Boolean paket;
     private String opis;
-    private int id_pp_zunanji_izvajalec;
+    private Integer id_pp_zunanji_izvajalec;
     private Boolean zunanja_storitev;
 
     public int getId_izdelki_storitve() {
@@ -69,7 +69,7 @@ public class IzdelkiStoritve {
         this.id_davcne_stopnje = id_davcne_stopnje;
     }
 
-    public int getId_pp_proizvajalci() {
+    public Integer getId_pp_proizvajalci() {
         return id_pp_proizvajalci;
     }
 
@@ -93,7 +93,7 @@ public class IzdelkiStoritve {
         this.opis = opis;
     }
 
-    public int getId_pp_zunanji_izvajalec() {
+    public Integer getId_pp_zunanji_izvajalec() {
         return id_pp_zunanji_izvajalec;
     }
 

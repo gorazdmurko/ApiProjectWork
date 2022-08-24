@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<testViewTag:testView />
+<testViewTag:izdani_racuni />
 
 <div>
     <form:form action="getEntity" method="post">

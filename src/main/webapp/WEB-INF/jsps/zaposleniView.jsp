@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<testViewTag:testView />
+<testViewTag:zaposleni />
 
 <div>
     <form:form action="getEntity" method="post">

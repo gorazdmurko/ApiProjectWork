@@ -16,6 +16,9 @@
     <title>API</title>
 </head>
 <body class="body">
+<h1 align="center">
+    POSLOVNI PARTNERJI
+</h1>
 <table style="border: blueviolet" border="1">
     <tr>
         <th style="color: mediumvioletred"> - ID POSL. PARTNERJI - </th>
@@ -25,8 +28,6 @@
         <th style="color: mediumvioletred"> - DAVCNA ST. - </th>
         <th style="color: mediumvioletred"> - MATICNA ST - </th>
         <th style="color: mediumvioletred"> - NASLOV - </th>
-        <th style="color: mediumvioletred"> - E-NASLOV - </th>
-        <th style="color: mediumvioletred"> - TELEFON - </th>
     </tr>
     <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
     <c:forEach var="partner" items="${partnerji}">
@@ -38,8 +39,6 @@
             <td>${partner.davcna_stevilka}</td>
             <td>${partner.maticna_stevilka}</td>
             <td>${partner.naslov}</td>
-            <td>${partner.e_naslov}</td>
-            <td>${partner.telefon}</td>
         </tr>
     </c:forEach>
 </table>

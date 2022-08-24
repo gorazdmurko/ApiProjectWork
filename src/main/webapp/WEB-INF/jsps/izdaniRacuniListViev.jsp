@@ -16,6 +16,9 @@
     <title>ALL BLAGAJNE</title>
 </head>
 <body class="body">
+<h1 align="center">
+    IZDANI RACUNI
+</h1>
 <table style="border: blueviolet" border="1">
     <tr>
         <th style="color: mediumvioletred"> - ID IZDANI RACUNI - </th>

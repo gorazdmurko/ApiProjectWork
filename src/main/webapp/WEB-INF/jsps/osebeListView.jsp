@@ -16,6 +16,9 @@
     <title>API</title>
 </head>
 <body class="body">
+<h1 align="center">
+    OSEBE
+</h1>
 <table style="border: blueviolet" border="1">
     <tr>
         <th style="color: mediumvioletred"> - ID OSEBE - </th>
@@ -25,8 +28,6 @@
         <th style="color: mediumvioletred"> - SPOL - </th>
         <th style="color: mediumvioletred"> - DATUM ROJSTVA - </th>
         <th style="color: mediumvioletred"> - NASLOV - </th>
-        <th style="color: mediumvioletred"> - E-NASLOV - </th>
-        <th style="color: mediumvioletred"> - TELEFON - </th>
         <th style="color: mediumvioletred"> - DAVCNA ST. - </th>
         <th style="color: mediumvioletred"> - ID POSTNE ST. - </th>
     </tr>
@@ -40,8 +41,6 @@
             <td>${oseba.spol}</td>
             <td>${oseba.datum_rojstva}</td>
             <td>${oseba.naslov}</td>
-            <td>${oseba.enaslov}</td>
-            <td>${oseba.telefon}</td>
             <td>${oseba.davcna_stevilka}</td>
             <td>${oseba.id_postne_stevilke}</td>
         </tr>

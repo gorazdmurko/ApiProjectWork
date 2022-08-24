@@ -16,6 +16,9 @@
     <title>API</title>
 </head>
 <body class="body">
+<h1 align="center">
+    ODDELKI
+</h1>
 <table style="border: blueviolet" border="1">
     <tr>
         <th style="color: mediumvioletred"> - ID ODDELKI - </th>
@@ -32,7 +35,7 @@
             <td>${oddelek.id_oddelki}</td>
             <td>${oddelek.oddelek_naziv}</td>
             <td>${oddelek.stevilka_oddelka}</td>
-            <td>${oddelek.id_poslovne_enote_zdravilisca}</td>
+            <td>${oddelek.id_poslovne_enote_zdravilisce}</td>
             <td>${oddelek.telefon}</td>
             <td>${oddelek.opis}</td>
             <td>${oddelek.id_pp_zunanji_izvajalec}</td>

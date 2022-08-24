@@ -15,7 +15,7 @@ public class Oddelki {
     private int id_poslovne_enote_zdravilisce;
     private String telefon;
     private String opis;
-    private int id_pp_zunanji_izvajalec;
+    private Integer id_pp_zunanji_izvajalec;
 
     public int getId_oddelki() {
         return id_oddelki;
@@ -65,7 +65,7 @@ public class Oddelki {
         this.opis = opis;
     }
 
-    public int getId_pp_zunanji_izvajalec() {
+    public Integer getId_pp_zunanji_izvajalec() {
         return id_pp_zunanji_izvajalec;
     }
 

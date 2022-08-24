@@ -9,13 +9,13 @@ import javax.persistence.Table;
 public class PPKontakti {
 
     @Id
-    private int id_pp_kontaki;
+    private Integer id_pp_kontaki;
     private String telefon;
     private String enaslov;
-    private int id_osebe;
-    private int id_poslovni_partnerji;
+    private Integer id_osebe;
+    private Integer id_poslovni_partnerji;
 
-    public int getId_pp_kontaki() {
+    public Integer getId_pp_kontaki() {
         return id_pp_kontaki;
     }
 
@@ -39,7 +39,7 @@ public class PPKontakti {
         this.enaslov = enaslov;
     }
 
-    public int getId_osebe() {
+    public Integer getId_osebe() {
         return id_osebe;
     }
 
@@ -47,7 +47,7 @@ public class PPKontakti {
         this.id_osebe = id_osebe;
     }
 
-    public int getId_poslovni_partnerji() {
+    public Integer getId_poslovni_partnerji() {
         return id_poslovni_partnerji;
     }
 

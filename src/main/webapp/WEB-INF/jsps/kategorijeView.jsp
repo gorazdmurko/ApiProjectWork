@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<testViewTag:testView />
+<testViewTag:kategorije />
 
 <div>
     <form:form action="getEntity" method="post">
@@ -35,12 +35,12 @@
     </form:form>
 </div>
 <div>
-    <form:form action="ApiProjectWork" method="get">
+    <form:form action="/ApiProjectWork" method="get">
         <input type="submit" value="HOME" class="inputButton" />
     </form:form>
 </div>
 <div>
-    <c:if test="${id != null}">
+    <c:if test="${id_kat != null}">
         <table style="border: blueviolet" border="1">
             <tr>
                 <th style="color: mediumvioletred"> - ID KATEGORIJE - </th>

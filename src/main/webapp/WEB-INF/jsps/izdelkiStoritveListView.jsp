@@ -16,6 +16,9 @@
     <title>ALL BLAGAJNE</title>
 </head>
 <body class="body">
+<h1 align="center">
+    IZDELKI STORITVE
+</h1>
 <table style="border: blueviolet" border="1">
     <tr>
         <th style="color: mediumvioletred"> - ID IZDELKI STORITVE - </th>
@@ -43,7 +46,7 @@
             <td>${storitev.paket}</td>
             <td>${storitev.opis}</td>
             <td>${storitev.id_pp_zunanji_izvajalec}</td>
-            <td>${storitev.zunanje_storitve}</td>
+            <td>${storitev.zunanja_storitev}</td>
         </tr>
     </c:forEach>
 </table>

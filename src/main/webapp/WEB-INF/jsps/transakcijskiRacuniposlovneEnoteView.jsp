@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<testViewTag:testView />
+<testViewTag:tr_racuni_posl_enote />
 
 <div>
     <form:form action="getEntity" method="post">
@@ -40,7 +40,7 @@
     </form:form>
 </div>
 <div>
-    <c:if test="${id != null}">
+    <c:if test="${id_tr_rac_po_en != null}">
         <table style="border: blueviolet" border="1">
             <tr>
                 <th style="color: mediumvioletred"> - ID TR.RACUNI POSLOVNE EN. - </th>

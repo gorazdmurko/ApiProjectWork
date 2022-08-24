@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<testViewTag:testView />
+<testViewTag:poslovne_enote />
 
 <div>
     <form action="getEnota", method="post">

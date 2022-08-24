@@ -16,6 +16,9 @@
     <title>ALL BLAGAJNE</title>
 </head>
 <body class="body">
+<h1 align="center">
+    DAVCNE STOPNJE
+</h1>
 <table style="border: blueviolet" border="1">
     <tr>
         <th style="color: mediumvioletred"> - ID DAVCNE STOPNJE - </th>

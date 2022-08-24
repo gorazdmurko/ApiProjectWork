@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
 @Entity
 @Table(name = "izdani_racuni")
@@ -12,7 +13,7 @@ public class IzdaniRacuni {
     @Id
     private int id_izdani_racuni;
     private float st_racuna;
-    private long datum_racuna;
+    private Date datum_racuna;
     private int id_poslovne_enote;
     private int id_blagajne;
     private int id_zaposleni;
@@ -39,11 +40,11 @@ public class IzdaniRacuni {
         this.st_racuna = st_racuna;
     }
 
-    public long getDatum_racuna() {
+    public Date getDatum_racuna() {
         return datum_racuna;
     }
 
-    public void setDatum_racuna(long datum_racuna) {
+    public void setDatum_racuna(Date datum_racuna) {
         this.datum_racuna = datum_racuna;
     }
 

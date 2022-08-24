@@ -30,8 +30,8 @@
           p:dataSource-ref="dataSource">
         <property name="hibernateProperties">
             <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>   <!-- generates sql queries from the objects we provide -->
-                <prop key="hibernate.show_sql">true</prop>                                      <!-- should display all the queries it creates -->
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</prop>      <!-- generates sql queries from the objects we provide -->
+                <prop key="hibernate.show_sql">true</prop>                                          <!-- should display all the queries it creates -->
             </props>
         </property>
         <property name="annotatedClasses">

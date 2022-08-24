@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<testViewTag:testView />
+<testViewTag:drzave />
 
 <div>
     <form action="getDrzava", method="post">

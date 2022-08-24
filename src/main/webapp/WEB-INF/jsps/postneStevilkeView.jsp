@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<testViewTag:testView />
+<testViewTag:postne_stevilke />
 
 <div>
     <form action="getPostnaStevilka", method="post">

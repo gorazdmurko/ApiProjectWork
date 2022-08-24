@@ -38,8 +38,6 @@ public class OsebeController {
             model.addAttribute("spol", oseba.getSpol());
             model.addAttribute("dat_roj", oseba.getDatum_rojstva());
             model.addAttribute("naslov", oseba.getNaslov());
-            model.addAttribute("enaslov", oseba.getEnaslov());
-            model.addAttribute("telefon", oseba.getTelefon());
             model.addAttribute("davcna", oseba.getDavcna_stevilka());
             model.addAttribute("id_pos_ste", oseba.getId_postne_stevilke());
         } else {

@@ -16,6 +16,20 @@
     cursor: pointer;
 }
 
+table {
+    border: 2px solid red;
+    color: red;
+}
+
 td {
     text-align: center;
+}
+
+tr, td {
+    color: darkgreen;
+}
+
+tr:hover {
+    background-color: antiquewhite;
+    opacity: 50%;
 }
