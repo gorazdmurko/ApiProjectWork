@@ -52,6 +52,10 @@
 2. git branch -D 'branch_name' ~~ delete local branch
 3. git push 'remote_name' --delete 'branch_name' ~~ delete REMOTE branch
 
+# DELETE REMOTE & SET IT AGAIN
+1. git remote remove origin
+2. git remote add origin [https://youroriginurl.git]
+
 # USEFUL INFO
 - git status --> See changes
 - git branch -v --> To see the last commit on each branch, you can run
