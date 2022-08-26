@@ -2,8 +2,6 @@ package org.db2.murko.presker.api.healthresort.controller;
 
 import org.db2.murko.presker.api.healthresort.entity.Blagajne;
 import org.db2.murko.presker.api.healthresort.services.IBlagajneService;
-import org.db2.murko.presker.api.healthresort.services.IService;
-import org.db2.murko.presker.api.healthresort.services.impl.BlagajneServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

@@ -1,11 +1,8 @@
 package org.db2.murko.presker.api.healthresort.services.impl;
 
 import org.db2.murko.presker.api.healthresort.dao.IBlagajneDao;
-import org.db2.murko.presker.api.healthresort.dao.IDao;
-import org.db2.murko.presker.api.healthresort.dao.impl.BlagajneDaoImpl;
 import org.db2.murko.presker.api.healthresort.entity.Blagajne;
 import org.db2.murko.presker.api.healthresort.services.IBlagajneService;
-import org.db2.murko.presker.api.healthresort.services.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
