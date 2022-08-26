@@ -88,4 +88,11 @@
         </property>
     </bean>
 
+<!--    <bean class="org.db2.murko.presker.api.healthresort.dao.impl.BlagajneDaoImpl"-->
+<!--          name="dao-bean">-->
+<!--        <property name="hibernateTemplate">-->
+<!--            <ref bean="hibernateTemplate" />-->
+<!--        </property>-->
+<!--    </bean>-->
+
 </beans>

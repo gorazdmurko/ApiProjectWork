@@ -4,6 +4,7 @@ import org.db2.murko.presker.api.healthresort.dao.IDao;
 import org.db2.murko.presker.api.healthresort.dao.impl.BlagajneDaoImpl;
 import org.db2.murko.presker.api.healthresort.entity.Blagajne;
 import org.db2.murko.presker.api.healthresort.services.IService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
