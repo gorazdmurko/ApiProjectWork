@@ -2,6 +2,7 @@ package org.db2.murko.presker.api.healthresort.dao.impl;
 
 import org.db2.murko.presker.api.healthresort.dao.IDao;
 import org.db2.murko.presker.api.healthresort.entity.Blagajne;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -10,6 +11,7 @@ import java.util.List;
 @Repository
 public class ADao implements IDao {
 
+    @Autowired
     private HibernateTemplate hibernateTemplate;
 
     @Override
@@ -19,8 +21,8 @@ public class ADao implements IDao {
     }
 
     @Override
-    public Blagajne get(Integer id) {
-        return hibernateTemplate.get(Blagajne.class, id);
+    public Object get(Integer id) {
+        return hibernateTemplate.get(Object.class, id);
     }
 
     @Override

@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface IService<T> {
 
-    int save(T type);
+    int save(T object);
     T get(Integer id);
     List<T> getAll();
 }

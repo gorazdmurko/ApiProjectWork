@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface IDao<T> {
 
-    int create(T type);
+    int create(T object);
     T get(Integer id);
     List<T> getAll();
 }

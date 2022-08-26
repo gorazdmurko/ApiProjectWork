@@ -17,8 +17,8 @@ public class AService implements IService {
     }
 
     @Override
-    public int save(Object type) {
-        return getDao(new ADao()).create(type);
+    public int save(Object object) {
+        return getDao(new ADao()).create(object);
     }
 
     @Override

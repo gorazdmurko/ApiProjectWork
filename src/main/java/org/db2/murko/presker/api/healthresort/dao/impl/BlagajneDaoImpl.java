@@ -10,21 +10,15 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class BlagajneDaoImpl implements IDao<Blagajne> {
+public class BlagajneDaoImpl implements IBlagajneDao {
 
     @Autowired
     private HibernateTemplate hibernateTemplate;
 
-//    @Override
-//    public int create(Blagajne blagajne) {
-//        Integer result = (Integer) hibernateTemplate.save(blagajne);    // template saves the object into DB
-//
-//        return result;
-//    }
-
     @Override
-    public int create(Blagajne object) {
-        Integer result = (Integer) hibernateTemplate.save(object);    // template saves the object into DB
+    public int create(Blagajne blagajne) {
+        Integer result = (Integer) hibernateTemplate.save(blagajne);    // template saves the object into DB
+
         return result;
     }
 
