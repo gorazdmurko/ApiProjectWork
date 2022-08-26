@@ -55,6 +55,7 @@
 # DELETE REMOTE & SET IT AGAIN
 1. git remote remove origin
 2. git remote add origin [https://youroriginurl.git]
+3. git remote -v ~~ to check the origin address
 
 # USEFUL INFO
 - git status --> See changes
