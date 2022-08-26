@@ -52,7 +52,10 @@
 2. git branch -D 'branch_name' ~~ delete local branch
 3. git push 'remote_name' --delete 'branch_name' ~~ delete REMOTE branch
 
-# DELETE REMOTE & SET IT AGAIN
+# DELETE REMOTE BRANCH
+1. git push origin --delete [branchname]
+
+# DELETE REMOTE REPO & SET IT AGAIN
 1. git remote remove origin
 2. git remote add origin [https://youroriginurl.git]
 3. git remote -v ~~ to check the origin address
