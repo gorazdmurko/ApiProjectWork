@@ -2,6 +2,8 @@ package org.db2.murko.presker.api.healthresort.controller;
 
 import org.db2.murko.presker.api.healthresort.entity.Blagajne;
 import org.db2.murko.presker.api.healthresort.services.IBlagajneService;
+import org.db2.murko.presker.api.healthresort.services.IService;
+import org.db2.murko.presker.api.healthresort.services.impl.BlagajneServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -15,8 +17,14 @@ import java.util.List;
 @RequestMapping(value = "/blagajna")
 public class BlagajnaController {
 
-    @Autowired
-    IBlagajneService service;
+//    @Autowired
+//    IBlagajneService service;
+
+    private IService getService(IService service) {
+        return service;
+    }
+
+    private IService service = getService(new BlagajneServiceImpl());
 
     private final String BLAGAJNA_VIEW = "blagajnaView";
     private final String BLAGAJNA_LIST_VIEW = "blagajneListView";
@@ -30,7 +38,8 @@ public class BlagajnaController {
 
     @RequestMapping(value = "/getBlagajna", method = RequestMethod.POST)
     public String getEntity(@RequestParam("id") int id, ModelMap model) {
-        Blagajne blagajna = service.getBlagajne(id);
+        Blagajne blagajna = (Blagajne) service.get(id);
+        // Blagajne blagajna = service.getBlagajne(id);
 
         if (blagajna != null) {
             System.out.println("Blagajna: " + blagajna);
@@ -45,7 +54,8 @@ public class BlagajnaController {
 
     @RequestMapping(value = "/getBlagajneList")
     public String getBlagajneList(ModelMap model) {
-        List<Blagajne> blagajne = service.getBlagajneAll();
+        List<Blagajne> blagajne = service.getAll();
+        // List<Blagajne> blagajne = service.getBlagajneAll();
         System.out.println("List of Blagajne: " + blagajne);
         model.addAttribute("blagajne", blagajne);
         return BLAGAJNA_LIST_VIEW;
