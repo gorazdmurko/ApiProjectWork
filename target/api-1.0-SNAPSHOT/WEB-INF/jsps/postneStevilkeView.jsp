@@ -19,43 +19,45 @@
 
 <testViewTag:postne_stevilke />
 
-<div>
-    <form action="getPostnaStevilka", method="post">
-        <label for="blagajnaId">ID blagajne</label>
-        <input type="number" id="blagajnaId" name="id" />
-        <input type="submit" value="FETCH" />
-        <span>${error}</span>
-    </form>
-</div>
-<br />
-<div>
-    <form action="getList", method="get">
-        <label for="getAll" name="getAll">GET ALL</label>
-        <input type="submit" id="getAll" value="GET ALL">
-    </form>
-</div>
-<div>
-    <form:form action="/ApiProjectWork" method="get">
-        <input type="submit" value="HOME" class="inputButton" />
-    </form:form>
-</div>
-<div>
-    <c:if test="${id != null}">
-        <table style="border: blueviolet" border="1">
-            <tr>
-                <th style="color: mediumvioletred"> - ID POSTNE STEVILKE - </th>
-                <th style="color: mediumvioletred"> - POSTNA STEVILKA - </th>
-                <th style="color: mediumvioletred"> - KRAJ - </th>
-                <th style="color: mediumvioletred"> - ID DRZAVE - </th>
-            </tr>
-            <tr>
-                <td>${id}</td>
-                <td>${postna_st}</td>
-                <td>${kraj}</td>
-                <td>${id_drzave}</td>
-            </tr>
-        </table>
-    </c:if>
+<div align="center">
+    <div>
+        <form action="getPostnaStevilka", method="post">
+            <label for="blagajnaId">ID blagajne</label>
+            <input type="number" id="blagajnaId" name="id" />
+            <input type="submit" value="FETCH" />
+            <span>${error}</span>
+        </form>
+    </div>
+    <br />
+    <div>
+        <form action="getList", method="get">
+            <label for="getAll" name="getAll">GET ALL</label>
+            <input type="submit" id="getAll" value="GET ALL">
+        </form>
+    </div>
+    <div>
+        <form:form action="/ApiProjectWork" method="get">
+            <input type="submit" value="HOME" class="inputButton" />
+        </form:form>
+    </div>
+    <div>
+        <c:if test="${id != null}">
+            <table style="border: blueviolet" border="1">
+                <tr>
+                    <th style="color: mediumvioletred"> - ID POSTNE STEVILKE - </th>
+                    <th style="color: mediumvioletred"> - POSTNA STEVILKA - </th>
+                    <th style="color: mediumvioletred"> - KRAJ - </th>
+                    <th style="color: mediumvioletred"> - ID DRZAVE - </th>
+                </tr>
+                <tr>
+                    <td>${id}</td>
+                    <td>${postna_st}</td>
+                    <td>${kraj}</td>
+                    <td>${id_drzave}</td>
+                </tr>
+            </table>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>

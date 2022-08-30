@@ -19,45 +19,47 @@
 
 <testViewTag:dnevnik_blagajne />
 
-<div>
-    <form action="getEntity", method="post">
-        <label for="blagajnaId">ID blagajne</label>
-        <input type="number" id="blagajnaId" name="id" />
-        <input type="submit" value="FETCH" />
-        <span>${error}</span>
-    </form>
-</div>
-<br />
-<div>
-    <form action="getList", method="post">
-        <label for="getAll" name="getAll">GET ALL</label>
-        <input type="submit" id="getAll" value="GET ALL">
-    </form>
-</div>
-<div>
-    <form:form action="/ApiProjectWork" method="get">
-        <input type="submit" value="HOME" class="inputButton" />
-    </form:form>
-</div>
-<div>
-    <c:if test="${id != null}">
-        <table style="border: blueviolet" border="1">
-            <tr>
-                <th style="color: mediumvioletred"> - ID DNEVNIK BLAGAJNE - </th>
-                <th style="color: mediumvioletred"> - DATUM - CAS - </th>
-                <th style="color: mediumvioletred"> - UPORABNIK - </th>
-                <th style="color: mediumvioletred"> - OPERACIJA - </th>
-                <th style="color: mediumvioletred"> - KLJUC - </th>
-            </tr>
-            <tr>
-                <td>${id}</td>
-                <td>${datum}</td>
-                <td>${uporabnik}</td>
-                <td>${operacija}</td>
-                <td>${kljuc}</td>
-            </tr>
-        </table>
-    </c:if>
+<div align="center">
+    <div>
+        <form action="getEntity", method="post">
+            <label for="blagajnaId">ID blagajne</label>
+            <input type="number" id="blagajnaId" name="id" />
+            <input type="submit" value="FETCH" />
+            <span>${error}</span>
+        </form>
+    </div>
+    <br />
+    <div>
+        <form action="getList", method="post">
+            <label for="getAll" name="getAll">GET ALL</label>
+            <input type="submit" id="getAll" value="GET ALL">
+        </form>
+    </div>
+    <div>
+        <form:form action="/ApiProjectWork" method="get">
+            <input type="submit" value="HOME" class="inputButton" />
+        </form:form>
+    </div>
+    <div>
+        <c:if test="${id != null}">
+            <table style="border: blueviolet" border="1">
+                <tr>
+                    <th style="color: mediumvioletred"> - ID DNEVNIK BLAGAJNE - </th>
+                    <th style="color: mediumvioletred"> - DATUM - CAS - </th>
+                    <th style="color: mediumvioletred"> - UPORABNIK - </th>
+                    <th style="color: mediumvioletred"> - OPERACIJA - </th>
+                    <th style="color: mediumvioletred"> - KLJUC - </th>
+                </tr>
+                <tr>
+                    <td>${id}</td>
+                    <td>${datum}</td>
+                    <td>${uporabnik}</td>
+                    <td>${operacija}</td>
+                    <td>${kljuc}</td>
+                </tr>
+            </table>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>

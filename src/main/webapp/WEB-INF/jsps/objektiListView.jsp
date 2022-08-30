@@ -16,34 +16,37 @@
     <title>API</title>
 </head>
 <body class="body">
-<h1 align="center">
-    OBJEKTI
-</h1>
-<table style="border: blueviolet" border="1">
-    <tr>
-        <th style="color: mediumvioletred"> - ID OBJEKTI - </th>
-        <th style="color: mediumvioletred"> - OBJEKT - </th>
-        <th style="color: mediumvioletred"> - OPIS - </th>
-        <th style="color: mediumvioletred"> - ID POSL. ENOTE - </th>
-    </tr>
-    <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
-    <c:forEach var="objekt" items="${objekti}">
-        <tr>
-            <td>${objekt.id_objekti}</td>
-            <td>${objekt.objekt}</td>
-            <td>${objekt.opis}</td>
-            <td>${objekt.id_poslovne_enote}</td>
-        </tr>
-    </c:forEach>
-</table>
-<br />
-<div>
-    <button:buttonHome />
+<div align="center">
+    <h1>OBJEKTI</h1>
     <div>
-        <c:set var="controllerUrl" value="objekti" />
-        <form:form action="/ApiProjectWork/${controllerUrl}/get">
-            <input type="submit" value="BACK" class="inputButton" />
-        </form:form>
+        <table style="border: blueviolet" border="1">
+            <tr>
+                <th style="color: mediumvioletred"> - ID OBJEKTI - </th>
+                <th style="color: mediumvioletred"> - OBJEKT - </th>
+                <th style="color: mediumvioletred"> - OPIS - </th>
+                <th style="color: mediumvioletred"> - ID POSL. ENOTE - </th>
+            </tr>
+            <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
+            <c:forEach var="objekt" items="${objekti}">
+                <tr>
+                    <td>${objekt.id_objekti}</td>
+                    <td>${objekt.objekt}</td>
+                    <td>${objekt.opis}</td>
+                    <td>${objekt.id_poslovne_enote}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <br />
+    <div>
+        <div>
+            <c:set var="controllerUrl" value="objekti" />
+            <form:form action="/ApiProjectWork/${controllerUrl}/get">
+                <input type="submit" value="BACK" class="inputButton" />
+            </form:form>
+        </div>
+
+        <button:buttonHome />
     </div>
 </div>
 </body>

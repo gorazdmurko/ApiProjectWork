@@ -19,49 +19,51 @@
 
 <testViewTag:poslovni_partnerji />
 
-<div>
-    <form:form action="getEntity" method="post">
-        <label for="id">ID blagajne</label>
-        <input type="number" id="id" name="id" />
-        <input type="submit" value="FETCH" />
-        <span>${error}</span>
-    </form:form>
-</div>
-<br />
-<div>
-    <form:form action="getList" method="get">
-        <label for="getAll" name="getAll">GET ALL</label>
-        <input type="submit" id="getAll" value="GET ALL">
-    </form:form>
-</div>
-<div>
-    <form:form action="/ApiProjectWork" method="get">
-        <input type="submit" value="HOME" class="inputButton" />
-    </form:form>
-</div>
-<div>
-    <c:if test="${id_pos_par != null}">
-        <table style="border: blueviolet" border="1">
-            <tr>
-                <th style="color: mediumvioletred"> - ID POSL. PARTNERJI - </th>
-                <th style="color: mediumvioletred"> - ID POSTNE ST. - </th>
-                <th style="color: mediumvioletred"> - NAZIV 1 - </th>
-                <th style="color: mediumvioletred"> - NAZIV 2 - </th>
-                <th style="color: mediumvioletred"> - DAVCNA ST. - </th>
-                <th style="color: mediumvioletred"> - MATICNA ST - </th>
-                <th style="color: mediumvioletred"> - NASLOV - </th>
-            </tr>
-            <tr>
-                <td>${id_pos_par}</td>
-                <td>${id_pos_ste}</td>
-                <td>${naziv1}</td>
-                <td>${naziv2}</td>
-                <td>${dav_ste}</td>
-                <td>${mat_ste}</td>
-                <td>${naslov}</td>
-            </tr>
-        </table>
-    </c:if>
+<div align="center">
+    <div>
+        <form:form action="getEntity" method="post">
+            <label for="id">ID blagajne</label>
+            <input type="number" id="id" name="id" />
+            <input type="submit" value="FETCH" />
+            <span>${error}</span>
+        </form:form>
+    </div>
+    <br />
+    <div>
+        <form:form action="getList" method="get">
+            <label for="getAll" name="getAll">GET ALL</label>
+            <input type="submit" id="getAll" value="GET ALL">
+        </form:form>
+    </div>
+    <div>
+        <form:form action="/ApiProjectWork" method="get">
+            <input type="submit" value="HOME" class="inputButton" />
+        </form:form>
+    </div>
+    <div>
+        <c:if test="${id_pos_par != null}">
+            <table style="border: blueviolet" border="1">
+                <tr>
+                    <th style="color: mediumvioletred"> - ID POSL. PARTNERJI - </th>
+                    <th style="color: mediumvioletred"> - ID POSTNE ST. - </th>
+                    <th style="color: mediumvioletred"> - NAZIV 1 - </th>
+                    <th style="color: mediumvioletred"> - NAZIV 2 - </th>
+                    <th style="color: mediumvioletred"> - DAVCNA ST. - </th>
+                    <th style="color: mediumvioletred"> - MATICNA ST - </th>
+                    <th style="color: mediumvioletred"> - NASLOV - </th>
+                </tr>
+                <tr>
+                    <td>${id_pos_par}</td>
+                    <td>${id_pos_ste}</td>
+                    <td>${naziv1}</td>
+                    <td>${naziv2}</td>
+                    <td>${dav_ste}</td>
+                    <td>${mat_ste}</td>
+                    <td>${naslov}</td>
+                </tr>
+            </table>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>

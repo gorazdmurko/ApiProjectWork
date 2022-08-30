@@ -19,43 +19,45 @@
 
 <testViewTag:tr_racuni />
 
-<div>
-    <form:form action="getEntity" method="post">
-        <label for="id">ID blagajne</label>
-        <input type="number" id="id" name="id" />
-        <input type="submit" value="FETCH" />
-        <span>${error}</span>
-    </form:form>
-</div>
-<br />
-<div>
-    <form:form action="getList" method="get">
-        <label for="getAll" name="getAll">GET ALL</label>
-        <input type="submit" id="getAll" value="GET ALL">
-    </form:form>
-</div>
-<div>
-    <form:form action="/ApiProjectWork" method="get">
-        <input type="submit" value="HOME" class="inputButton" />
-    </form:form>
-</div>
-<div>
-    <c:if test="${id_tra_rac != null}">
-        <table style="border: blueviolet" border="1">
-            <tr>
-                <th style="color: mediumvioletred"> - ID TR.RACUN - </th>
-                <th style="color: mediumvioletred"> - TR.RACUN - </th>
-                <th style="color: mediumvioletred"> - ID POSL.PARTNERJI - </th>
-                <th style="color: mediumvioletred"> - ID PP BANKE - </th>
-            </tr>
-            <tr>
-                <td>${id_tra_rac}</td>
-                <td>${tra_rac}</td>
-                <td>${id_pos_par}</td>
-                <td>${id_pp_banke}</td>
-            </tr>
-        </table>
-    </c:if>
+<div align="center">
+    <div>
+        <form:form action="getEntity" method="post">
+            <label for="id">ID blagajne</label>
+            <input type="number" id="id" name="id" />
+            <input type="submit" value="FETCH" />
+            <span>${error}</span>
+        </form:form>
+    </div>
+    <br />
+    <div>
+        <form:form action="getList" method="get">
+            <label for="getAll" name="getAll">GET ALL</label>
+            <input type="submit" id="getAll" value="GET ALL">
+        </form:form>
+    </div>
+    <div>
+        <form:form action="/ApiProjectWork" method="get">
+            <input type="submit" value="HOME" class="inputButton" />
+        </form:form>
+    </div>
+    <div>
+        <c:if test="${id_tra_rac != null}">
+            <table style="border: blueviolet" border="1">
+                <tr>
+                    <th style="color: mediumvioletred"> - ID TR.RACUN - </th>
+                    <th style="color: mediumvioletred"> - TR.RACUN - </th>
+                    <th style="color: mediumvioletred"> - ID POSL.PARTNERJI - </th>
+                    <th style="color: mediumvioletred"> - ID PP BANKE - </th>
+                </tr>
+                <tr>
+                    <td>${id_tra_rac}</td>
+                    <td>${tra_rac}</td>
+                    <td>${id_pos_par}</td>
+                    <td>${id_pp_banke}</td>
+                </tr>
+            </table>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>

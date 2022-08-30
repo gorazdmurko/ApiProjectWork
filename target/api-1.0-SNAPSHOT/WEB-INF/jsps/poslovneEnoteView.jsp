@@ -19,47 +19,49 @@
 
 <testViewTag:poslovne_enote />
 
-<div>
-    <form action="getEnota", method="post">
-        <label for="enotaId">ID poslovne enote</label>
-        <input type="number" id="enotaId" name="id" />      <!-- name="id" ... @RequestParam in controller !!! -->
-        <input type="submit" value="FETCH" />
-        <span>${error}</span>
-    </form>
-</div>
-<br />
-<div>
-    <form action="getEnotaList", method="get">
-        <label for="getAll" name="getAll">GET ALL</label>
-        <input type="submit" id="getAll" value="GET ALL">
-    </form>
-</div>
-<div>
-    <form:form action="/ApiProjectWork" method="get">
-        <input type="submit" value="HOME" class="inputButton" />
-    </form:form>
-</div>
-<div>
-    <c:if test="${id != null}">
-        <table style="border: blueviolet" border="1">
-            <tr>
-                <th style="color: mediumvioletred"> - ID POSLOVNE ENOTE - </th>
-                <th style="color: mediumvioletred"> - ENOTA - </th>
-                <th style="color: mediumvioletred"> - OZNAKA - </th>
-                <th style="color: mediumvioletred"> - NASLOV - </th>
-                <th style="color: mediumvioletred"> - KRAJ - </th>
-                <th style="color: mediumvioletred"> - POSTA - </th>
-            </tr>
-            <tr>
-                <td>${id}</td>
-                <td>${enota}</td>
-                <td>${oznaka}</td>
-                <td>${naslov}</td>
-                <td>${kraj}</td>
-                <td>${posta}</td>
-            </tr>
-        </table>
-    </c:if>
+<div align="center">
+    <div>
+        <form action="getEnota", method="post">
+            <label for="enotaId">ID poslovne enote</label>
+            <input type="number" id="enotaId" name="id" />      <!-- name="id" ... @RequestParam in controller !!! -->
+            <input type="submit" value="FETCH" />
+            <span>${error}</span>
+        </form>
+    </div>
+    <br />
+    <div>
+        <form action="getEnotaList", method="get">
+            <label for="getAll" name="getAll">GET ALL</label>
+            <input type="submit" id="getAll" value="GET ALL">
+        </form>
+    </div>
+    <div>
+        <form:form action="/ApiProjectWork" method="get">
+            <input type="submit" value="HOME" class="inputButton" />
+        </form:form>
+    </div>
+    <div>
+        <c:if test="${id != null}">
+            <table style="border: blueviolet" border="1">
+                <tr>
+                    <th style="color: mediumvioletred"> - ID POSLOVNE ENOTE - </th>
+                    <th style="color: mediumvioletred"> - ENOTA - </th>
+                    <th style="color: mediumvioletred"> - OZNAKA - </th>
+                    <th style="color: mediumvioletred"> - NASLOV - </th>
+                    <th style="color: mediumvioletred"> - KRAJ - </th>
+                    <th style="color: mediumvioletred"> - POSTA - </th>
+                </tr>
+                <tr>
+                    <td>${id}</td>
+                    <td>${enota}</td>
+                    <td>${oznaka}</td>
+                    <td>${naslov}</td>
+                    <td>${kraj}</td>
+                    <td>${posta}</td>
+                </tr>
+            </table>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>

@@ -19,49 +19,51 @@
 
 <testViewTag:oddelki />
 
-<div>
-    <form:form action="getEntity" method="post">
-        <label for="id">ID blagajne</label>
-        <input type="number" id="id" name="id" />
-        <input type="submit" value="FETCH" />
-        <span>${error}</span>
-    </form:form>
-</div>
-<br />
-<div>
-    <form:form action="getList" method="get">
-        <label for="getAll" name="getAll">GET ALL</label>
-        <input type="submit" id="getAll" value="GET ALL">
-    </form:form>
-</div>
-<div>
-    <form:form action="/ApiProjectWork" method="get">
-        <input type="submit" value="HOME" class="inputButton" />
-    </form:form>
-</div>
-<div>
-    <c:if test="${id_oddelka != null}">
-        <table style="border: blueviolet" border="1">
-            <tr>
-                <th style="color: mediumvioletred"> - ID ODDELKI - </th>
-                <th style="color: mediumvioletred"> - ODDELEK NAZIV - </th>
-                <th style="color: mediumvioletred"> - STEVILKA ODDELKA - </th>
-                <th style="color: mediumvioletred"> - ID POSL.ENOTE ZDRAVILISCA - </th>
-                <th style="color: mediumvioletred"> - TELEFON - </th>
-                <th style="color: mediumvioletred"> - OPIS - </th>
-                <th style="color: mediumvioletred"> - ID PP ZUN.IZVAJALEC - </th>
-            </tr>
-            <tr>
-                <td>${id_oddelka}</td>
-                <td>${naziv}</td>
-                <td>${ste_oddelka}</td>
-                <td>${id_pos_en_zdr}</td>
-                <td>${tel}</td>
-                <td>${opis}</td>
-                <td>${id_pp_zun_izv}</td>
-            </tr>
-        </table>
-    </c:if>
+<div align="center">
+    <div>
+        <form:form action="getEntity" method="post">
+            <label for="id">ID blagajne</label>
+            <input type="number" id="id" name="id" />
+            <input type="submit" value="FETCH" />
+            <span>${error}</span>
+        </form:form>
+    </div>
+    <br />
+    <div>
+        <form:form action="getList" method="get">
+            <label for="getAll" name="getAll">GET ALL</label>
+            <input type="submit" id="getAll" value="GET ALL">
+        </form:form>
+    </div>
+    <div>
+        <form:form action="/ApiProjectWork" method="get">
+            <input type="submit" value="HOME" class="inputButton" />
+        </form:form>
+    </div>
+    <div>
+        <c:if test="${id_oddelka != null}">
+            <table style="border: blueviolet" border="1">
+                <tr>
+                    <th style="color: mediumvioletred"> - ID ODDELKI - </th>
+                    <th style="color: mediumvioletred"> - ODDELEK NAZIV - </th>
+                    <th style="color: mediumvioletred"> - STEVILKA ODDELKA - </th>
+                    <th style="color: mediumvioletred"> - ID POSL.ENOTE ZDRAVILISCA - </th>
+                    <th style="color: mediumvioletred"> - TELEFON - </th>
+                    <th style="color: mediumvioletred"> - OPIS - </th>
+                    <th style="color: mediumvioletred"> - ID PP ZUN.IZVAJALEC - </th>
+                </tr>
+                <tr>
+                    <td>${id_oddelka}</td>
+                    <td>${naziv}</td>
+                    <td>${ste_oddelka}</td>
+                    <td>${id_pos_en_zdr}</td>
+                    <td>${tel}</td>
+                    <td>${opis}</td>
+                    <td>${id_pp_zun_izv}</td>
+                </tr>
+            </table>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>

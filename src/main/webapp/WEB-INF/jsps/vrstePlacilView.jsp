@@ -19,39 +19,41 @@
 
 <testViewTag:vrste_placil />
 
-<div>
-    <form:form action="getEntity" method="post">
-        <label for="id">ID blagajne</label>
-        <input type="number" id="id" name="id" />
-        <input type="submit" value="FETCH" />
-        <span>${error}</span>
-    </form:form>
-</div>
-<br />
-<div>
-    <form:form action="getList" method="get">
-        <label for="getAll" name="getAll">GET ALL</label>
-        <input type="submit" id="getAll" value="GET ALL">
-    </form:form>
-</div>
-<div>
-    <form:form action="/ApiProjectWork" method="get">
-        <input type="submit" value="HOME" class="inputButton" />
-    </form:form>
-</div>
-<div>
-    <c:if test="${id != null}">
-        <table style="border: blueviolet" border="1">
-            <tr>
-                <th style="color: mediumvioletred"> - ID VRSTE PLACIL - </th>
-                <th style="color: mediumvioletred"> - VRSTA PLACILA - </th>
-            </tr>
-            <tr>
-                <td>${id}</td>
-                <td>${vrsta_pl}</td>
-            </tr>
-        </table>
-    </c:if>
+<div align="center">
+    <div>
+        <form:form action="getEntity" method="post">
+            <label for="id">ID blagajne</label>
+            <input type="number" id="id" name="id" />
+            <input type="submit" value="FETCH" />
+            <span>${error}</span>
+        </form:form>
+    </div>
+    <br />
+    <div>
+        <form:form action="getList" method="get">
+            <label for="getAll" name="getAll">GET ALL</label>
+            <input type="submit" id="getAll" value="GET ALL">
+        </form:form>
+    </div>
+    <div>
+        <form:form action="/ApiProjectWork" method="get">
+            <input type="submit" value="HOME" class="inputButton" />
+        </form:form>
+    </div>
+    <div>
+        <c:if test="${id != null}">
+            <table style="border: blueviolet" border="1">
+                <tr>
+                    <th style="color: mediumvioletred"> - ID VRSTE PLACIL - </th>
+                    <th style="color: mediumvioletred"> - VRSTA PLACILA - </th>
+                </tr>
+                <tr>
+                    <td>${id}</td>
+                    <td>${vrsta_pl}</td>
+                </tr>
+            </table>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>

@@ -19,41 +19,43 @@
 
     <testViewTag:blagajne />
 
-    <div>
-        <form action="getBlagajna", method="post">
-            <label for="blagajnaId">ID blagajne</label>
-            <input type="number" id="blagajnaId" name="id" />
-            <input type="submit" value="FETCH" />
-            <span>${error}</span>
-        </form>
-    </div>
-    <br />
-    <div>
-        <form action="getBlagajneList", method="post">
-            <label for="getAll" name="getAll">GET ALL</label>
-            <input type="submit" id="getAll" value="GET ALL">
-        </form>
-    </div>
-    <div>
-        <form:form action="/ApiProjectWork" method="get">
-            <input type="submit" value="HOME" class="inputButton" />
-        </form:form>
-    </div>
-    <div>
-        <c:if test="${id != null}">
-            <table style="border: blueviolet" border="1">
-                <tr>
-                    <th style="color: mediumvioletred"> - ID BLAGAJNE - </th>
-                    <th style="color: mediumvioletred"> - OZNAKA - </th>
-                    <th style="color: mediumvioletred"> - ID POSLOVNE ENOTE - </th>
-                </tr>
-                <tr>
-                    <td>${id}</td>
-                    <td>${oznaka}</td>
-                    <td>${id_pos_en}</td>
-                </tr>
-            </table>
-        </c:if>
+    <div align="center">
+        <div>
+            <form action="getBlagajna", method="post">
+                <label for="blagajnaId">ID blagajne</label>
+                <input type="number" id="blagajnaId" name="id" />
+                <input type="submit" value="FETCH" />
+                <span>${error}</span>
+            </form>
+        </div>
+        <br />
+        <div>
+            <form action="getBlagajneList", method="post">
+                <label for="getAll" name="getAll">GET ALL</label>
+                <input type="submit" id="getAll" value="GET ALL">
+            </form>
+        </div>
+        <div>
+            <form:form action="/ApiProjectWork" method="get">
+                <input type="submit" value="HOME" class="inputButton" />
+            </form:form>
+        </div>
+        <div>
+            <c:if test="${id != null}">
+                <table style="border: blueviolet" border="1">
+                    <tr>
+                        <th style="color: mediumvioletred"> - ID BLAGAJNE - </th>
+                        <th style="color: mediumvioletred"> - OZNAKA - </th>
+                        <th style="color: mediumvioletred"> - ID POSLOVNE ENOTE - </th>
+                    </tr>
+                    <tr>
+                        <td>${id}</td>
+                        <td>${oznaka}</td>
+                        <td>${id_pos_en}</td>
+                    </tr>
+                </table>
+            </c:if>
+        </div>
     </div>
 </body>
 </html>

@@ -33,7 +33,7 @@
 
     <homeView:allEntities />
 
-    <div class="grid_container">
+    <div class="grid_container" align="center">
         <div class="grid_item grid_item_1">
             <form:form action="blagajna/get" method="post">
                 <input type="submit" name="get" value="BLAGAJNE" class="inputButton">

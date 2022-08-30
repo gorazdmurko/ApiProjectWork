@@ -16,36 +16,39 @@
     <title>API</title>
 </head>
 <body class="body">
-<h1 align="center">
-    RACUNI PLACILA
-</h1>
-<table style="border: blueviolet" border="1">
-    <tr>
-        <th style="color: mediumvioletred"> - ID RACUNI PLACILA - </th>
-        <th style="color: mediumvioletred"> - DATUM - </th>
-        <th style="color: mediumvioletred"> - ZNESEK - </th>
-        <th style="color: mediumvioletred"> - ID VRSTE PLACIL - </th>
-        <th style="color: mediumvioletred"> - ID IZDANI RACUNI - </th>
-    </tr>
-    <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
-    <c:forEach var="racun" items="${racuni}">
-        <tr>
-            <td>${racun.id_racuni_placila}</td>
-            <td>${racun.datum}</td>
-            <td>${racun.znesek}</td>
-            <td>${racun.id_vrste_placil}</td>
-            <td>${racun.id_izdani_racuni}</td>
-        </tr>
-    </c:forEach>
-</table>
-<br />
-<div>
-    <button:buttonHome />
+<div align="center">
+    <h1>RACUNI PLACILA</h1>
     <div>
-        <c:set var="controllerUrl" value="racuni-placila" />
-        <form:form action="/ApiProjectWork/${controllerUrl}/get">
-            <input type="submit" value="BACK" class="inputButton" />
-        </form:form>
+        <table style="border: blueviolet" border="1">
+            <tr>
+                <th style="color: mediumvioletred"> - ID RACUNI PLACILA - </th>
+                <th style="color: mediumvioletred"> - DATUM - </th>
+                <th style="color: mediumvioletred"> - ZNESEK - </th>
+                <th style="color: mediumvioletred"> - ID VRSTE PLACIL - </th>
+                <th style="color: mediumvioletred"> - ID IZDANI RACUNI - </th>
+            </tr>
+            <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
+            <c:forEach var="racun" items="${racuni}">
+                <tr>
+                    <td>${racun.id_racuni_placila}</td>
+                    <td>${racun.datum}</td>
+                    <td>${racun.znesek}</td>
+                    <td>${racun.id_vrste_placil}</td>
+                    <td>${racun.id_izdani_racuni}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <br />
+    <div>
+        <div>
+            <c:set var="controllerUrl" value="racuni-placila" />
+            <form:form action="/ApiProjectWork/${controllerUrl}/get">
+                <input type="submit" value="BACK" class="inputButton" />
+            </form:form>
+        </div>
+
+        <button:buttonHome />
     </div>
 </div>
 </body>

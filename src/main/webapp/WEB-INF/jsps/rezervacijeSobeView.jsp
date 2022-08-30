@@ -19,45 +19,47 @@
 
 <testViewTag:rezervacije_sobe />
 
-<div>
-    <form:form action="getEntity" method="post">
-        <label for="id">ID blagajne</label>
-        <input type="number" id="id" name="id" />
-        <input type="submit" value="FETCH" />
-        <span>${error}</span>
-    </form:form>
-</div>
-<br />
-<div>
-    <form:form action="getList" method="get">
-        <label for="getAll" name="getAll">GET ALL</label>
-        <input type="submit" id="getAll" value="GET ALL">
-    </form:form>
-</div>
-<div>
-    <form:form action="/ApiProjectWork" method="get">
-        <input type="submit" value="HOME" class="inputButton" />
-    </form:form>
-</div>
-<div>
-    <c:if test="${id_rez_sobe != null}">
-        <table style="border: blueviolet" border="1">
-            <tr>
-                <th style="color: mediumvioletred"> - ID REZERVACIJE SOBE - </th>
-                <th style="color: mediumvioletred"> - ID REZERVACIJE - </th>
-                <th style="color: mediumvioletred"> - ID SOBE - </th>
-                <th style="color: mediumvioletred"> - DATUM OD - </th>
-                <th style="color: mediumvioletred"> - DATUM DO - </th>
-            </tr>
-            <tr>
-                <td>${id_rez_sobe}</td>
-                <td>${id_rez}</td>
-                <td>${id_sobe}</td>
-                <td>${datum_od}</td>
-                <td>${datum_do}</td>
-            </tr>
-        </table>
-    </c:if>
+<div align="center">
+    <div>
+        <form:form action="getEntity" method="post">
+            <label for="id">ID blagajne</label>
+            <input type="number" id="id" name="id" />
+            <input type="submit" value="FETCH" />
+            <span>${error}</span>
+        </form:form>
+    </div>
+    <br />
+    <div>
+        <form:form action="getList" method="get">
+            <label for="getAll" name="getAll">GET ALL</label>
+            <input type="submit" id="getAll" value="GET ALL">
+        </form:form>
+    </div>
+    <div>
+        <form:form action="/ApiProjectWork" method="get">
+            <input type="submit" value="HOME" class="inputButton" />
+        </form:form>
+    </div>
+    <div>
+        <c:if test="${id_rez_sobe != null}">
+            <table style="border: blueviolet" border="1">
+                <tr>
+                    <th style="color: mediumvioletred"> - ID REZERVACIJE SOBE - </th>
+                    <th style="color: mediumvioletred"> - ID REZERVACIJE - </th>
+                    <th style="color: mediumvioletred"> - ID SOBE - </th>
+                    <th style="color: mediumvioletred"> - DATUM OD - </th>
+                    <th style="color: mediumvioletred"> - DATUM DO - </th>
+                </tr>
+                <tr>
+                    <td>${id_rez_sobe}</td>
+                    <td>${id_rez}</td>
+                    <td>${id_sobe}</td>
+                    <td>${datum_od}</td>
+                    <td>${datum_do}</td>
+                </tr>
+            </table>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>

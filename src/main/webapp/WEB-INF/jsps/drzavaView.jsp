@@ -19,41 +19,43 @@
 
 <testViewTag:drzave />
 
-<div>
-    <form action="getDrzava", method="post">
-        <label for="drzavaId">ID drzave</label>
-        <input type="number" id="drzavaId" name="id" />
-        <input type="submit" value="FETCH" />
-        <span>${error}</span>
-    </form>
-</div>
-<br />
-<div>
-    <form action="getList", method="get">
-        <label for="getAll" name="getAll">GET ALL</label>
-        <input type="submit" id="getAll" value="GET ALL">
-    </form>
-</div>
-<div>
-    <form:form action="/ApiProjectWork" method="get">
-        <input type="submit" value="HOME" class="inputButton" />
-    </form:form>
-</div>
-<div>
-    <c:if test="${id != null}">
-        <table style="border: blueviolet" border="1">
-            <tr>
-                <th style="color: mediumvioletred"> - ID DRZAVE - </th>
-                <th style="color: mediumvioletred"> - DRZAVA - </th>
-                <th style="color: mediumvioletred"> - OZNAKA DRZAVE - </th>
-            </tr>
-            <tr>
-                <td>${id}</td>
-                <td>${drzava}</td>
-                <td>${oznaka}</td>
-            </tr>
-        </table>
-    </c:if>
+<div align="center">
+    <div>
+        <form action="getDrzava", method="post">
+            <label for="drzavaId">ID drzave</label>
+            <input type="number" id="drzavaId" name="id" />
+            <input type="submit" value="FETCH" />
+            <span>${error}</span>
+        </form>
+    </div>
+    <br />
+    <div>
+        <form action="getList", method="get">
+            <label for="getAll" name="getAll">GET ALL</label>
+            <input type="submit" id="getAll" value="GET ALL">
+        </form>
+    </div>
+    <div>
+        <form:form action="/ApiProjectWork" method="get">
+            <input type="submit" value="HOME" class="inputButton" />
+        </form:form>
+    </div>
+    <div>
+        <c:if test="${id != null}">
+            <table style="border: blueviolet" border="1">
+                <tr>
+                    <th style="color: mediumvioletred"> - ID DRZAVE - </th>
+                    <th style="color: mediumvioletred"> - DRZAVA - </th>
+                    <th style="color: mediumvioletred"> - OZNAKA DRZAVE - </th>
+                </tr>
+                <tr>
+                    <td>${id}</td>
+                    <td>${drzava}</td>
+                    <td>${oznaka}</td>
+                </tr>
+            </table>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>

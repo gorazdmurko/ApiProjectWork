@@ -16,46 +16,49 @@
     <title>ALL BLAGAJNE</title>
 </head>
 <body class="body">
-<h1 align="center">
-    IZDANI RACUNI
-</h1>
-<table style="border: blueviolet" border="1">
-    <tr>
-        <th style="color: mediumvioletred"> - ID IZDANI RACUNI - </th>
-        <th style="color: mediumvioletred"> - ST. RACUNA - </th>
-        <th style="color: mediumvioletred"> - DATUM RACUNA - </th>
-        <th style="color: mediumvioletred"> - ID POSL. ENOTE - </th>
-        <th style="color: mediumvioletred"> - ID BLAGAJNE - </th>
-        <th style="color: mediumvioletred"> - ID ZAPOSLENI - </th>
-        <th style="color: mediumvioletred"> - ZOI - </th>
-        <th style="color: mediumvioletred"> - EOR - </th>
-        <th style="color: mediumvioletred"> - ID TR. RACUN POSL. ENOTE - </th>
-        <th style="color: mediumvioletred"> - ID REZERVACIJE - </th>
-    </tr>
-    <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
-    <c:forEach var="racun" items="${racuni}">
-        <tr>
-            <td>${racun.id_izdani_racuni}</td>
-            <td>${racun.st_racuna}</td>
-            <td>${racun.datum_racuna}</td>
-            <td>${racun.id_poslovne_enote}</td>
-            <td>${racun.id_blagajne}</td>
-            <td>${racun.id_zaposleni}</td>
-            <td>${racun.zoi}</td>
-            <td>${racun.eor}</td>
-            <td>${racun.id_transakcijski_racuni_poslovne_enote}</td>
-            <td>${racun.id_rezervacije}</td>
-        </tr>
-    </c:forEach>
-</table>
-<br />
-<div>
-    <button:buttonHome />
+<div  align="center">
+    <h1>IZDANI RACUNI</h1>
     <div>
-        <c:set var="controllerUrl" value="izdani-racuni" />
-        <form:form action="/ApiProjectWork/${controllerUrl}/get">
-            <input type="submit" value="BACK" class="inputButton" />
-        </form:form>
+        <table style="border: blueviolet" border="1">
+            <tr>
+                <th style="color: mediumvioletred"> - ID IZDANI RACUNI - </th>
+                <th style="color: mediumvioletred"> - ST. RACUNA - </th>
+                <th style="color: mediumvioletred"> - DATUM RACUNA - </th>
+                <th style="color: mediumvioletred"> - ID POSL. ENOTE - </th>
+                <th style="color: mediumvioletred"> - ID BLAGAJNE - </th>
+                <th style="color: mediumvioletred"> - ID ZAPOSLENI - </th>
+                <th style="color: mediumvioletred"> - ZOI - </th>
+                <th style="color: mediumvioletred"> - EOR - </th>
+                <th style="color: mediumvioletred"> - ID TR. RACUN POSL. ENOTE - </th>
+                <th style="color: mediumvioletred"> - ID REZERVACIJE - </th>
+            </tr>
+            <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
+            <c:forEach var="racun" items="${racuni}">
+                <tr>
+                    <td>${racun.id_izdani_racuni}</td>
+                    <td>${racun.st_racuna}</td>
+                    <td>${racun.datum_racuna}</td>
+                    <td>${racun.id_poslovne_enote}</td>
+                    <td>${racun.id_blagajne}</td>
+                    <td>${racun.id_zaposleni}</td>
+                    <td>${racun.zoi}</td>
+                    <td>${racun.eor}</td>
+                    <td>${racun.id_transakcijski_racuni_poslovne_enote}</td>
+                    <td>${racun.id_rezervacije}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <br />
+    <div>
+        <div>
+            <c:set var="controllerUrl" value="izdani-racuni" />
+            <form:form action="/ApiProjectWork/${controllerUrl}/get">
+                <input type="submit" value="BACK" class="inputButton" />
+            </form:form>
+        </div>
+
+        <button:buttonHome />
     </div>
 </div>
 </body>

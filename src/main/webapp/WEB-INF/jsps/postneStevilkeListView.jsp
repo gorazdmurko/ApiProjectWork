@@ -16,33 +16,36 @@
     <title>ALL BLAGAJNE</title>
 </head>
 <body class="body">
-<h1 align="center">
-    POSTNE STEVILKE
-</h1>
-<table style="border: blueviolet" border="1">
-    <tr>
-        <th style="color: mediumvioletred"> - ID POSTNE STEVILKE - </th>
-        <th style="color: mediumvioletred"> - POSTNA STEVILKA - </th>
-        <th style="color: mediumvioletred"> - KRAJ - </th>
-        <th style="color: mediumvioletred"> - ID DRZAVE - </th>
-    </tr>
-    <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
-    <c:forEach var="stevilka" items="${stevilke}">
-        <tr>
-            <td>${stevilka.id_postne_stevilke}</td>
-            <td>${stevilka.postna_stevilka}</td>
-            <td>${stevilka.kraj_mesto}</td>
-            <td>${stevilka.id_drzave}</td>
-        </tr>
-    </c:forEach>
-</table>
-<br />
-<div>
-    <button:buttonHome />
+<div align="center">
+    <h1>POSTNE STEVILKE</h1>
     <div>
-        <form:form action="/ApiProjectWork/postne_stevilke/get">
-            <input type="submit" value="BACK" class="inputButton" />
-        </form:form>
+        <table style="border: blueviolet" border="1">
+            <tr>
+                <th style="color: mediumvioletred"> - ID POSTNE STEVILKE - </th>
+                <th style="color: mediumvioletred"> - POSTNA STEVILKA - </th>
+                <th style="color: mediumvioletred"> - KRAJ - </th>
+                <th style="color: mediumvioletred"> - ID DRZAVE - </th>
+            </tr>
+            <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
+            <c:forEach var="stevilka" items="${stevilke}">
+                <tr>
+                    <td>${stevilka.id_postne_stevilke}</td>
+                    <td>${stevilka.postna_stevilka}</td>
+                    <td>${stevilka.kraj_mesto}</td>
+                    <td>${stevilka.id_drzave}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <br />
+    <div>
+        <div>
+            <form:form action="/ApiProjectWork/postne_stevilke/get">
+                <input type="submit" value="BACK" class="inputButton" />
+            </form:form>
+        </div>
+
+        <button:buttonHome />
     </div>
 </div>
 </body>

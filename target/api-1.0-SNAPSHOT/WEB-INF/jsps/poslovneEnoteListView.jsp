@@ -16,37 +16,40 @@
     <title>ALL BLAGAJNE</title>
 </head>
 <body class="body">
-<h1 align="center">
-    POSLOVNE ENOTE
-</h1>
-<table style="border: blueviolet" border="1">
-    <tr>
-        <th style="color: mediumvioletred"> - ID POSLOVNE ENOTE - </th>
-        <th style="color: mediumvioletred"> - ENOTA - </th>
-        <th style="color: mediumvioletred"> - OZNAKA - </th>
-        <th style="color: mediumvioletred"> - NASLOV - </th>
-        <th style="color: mediumvioletred"> - KRAJ - </th>
-        <th style="color: mediumvioletred"> - POSTA - </th>
-    </tr>
-    <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
-    <c:forEach var="enota" items="${enote}">
-        <tr>
-            <td>${enota.id_poslovne_enote}</td>
-            <td>${enota.poslovna_enota}</td>
-            <td>${enota.oznaka_poslovne_enote}</td>
-            <td>${enota.naslov}</td>
-            <td>${enota.kraj_izdaje_racuna}</td>
-            <td>${enota.id_postne_stevilke}</td>
-        </tr>
-    </c:forEach>
-</table>
-<br />
-<div>
-    <button:buttonHome />
+<div align="center">
+    <h1>POSLOVNE ENOTE</h1>
     <div>
-        <form:form action="/ApiProjectWork/poslovne_enote/get">
-            <input type="submit" value="BACK" class="inputButton" />
-        </form:form>
+        <table style="border: blueviolet" border="1">
+            <tr>
+                <th style="color: mediumvioletred"> - ID POSLOVNE ENOTE - </th>
+                <th style="color: mediumvioletred"> - ENOTA - </th>
+                <th style="color: mediumvioletred"> - OZNAKA - </th>
+                <th style="color: mediumvioletred"> - NASLOV - </th>
+                <th style="color: mediumvioletred"> - KRAJ - </th>
+                <th style="color: mediumvioletred"> - POSTA - </th>
+            </tr>
+            <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
+            <c:forEach var="enota" items="${enote}">
+                <tr>
+                    <td>${enota.id_poslovne_enote}</td>
+                    <td>${enota.poslovna_enota}</td>
+                    <td>${enota.oznaka_poslovne_enote}</td>
+                    <td>${enota.naslov}</td>
+                    <td>${enota.kraj_izdaje_racuna}</td>
+                    <td>${enota.id_postne_stevilke}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <br />
+    <div>
+        <div>
+            <form:form action="/ApiProjectWork/poslovne_enote/get">
+                <input type="submit" value="BACK" class="inputButton" />
+            </form:form>
+        </div>
+
+        <button:buttonHome />
     </div>
 </div>
 </body>

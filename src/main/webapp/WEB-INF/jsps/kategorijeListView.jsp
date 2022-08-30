@@ -16,36 +16,39 @@
     <title>API</title>
 </head>
 <body class="body">
-<h1 align="center">
-    KATEGORIJE
-</h1>
-<table style="border: blueviolet" border="1">
-    <tr>
-        <th style="color: mediumvioletred"> - ID KATEGORIJE - </th>
-        <th style="color: mediumvioletred"> - KATEGORIJA - </th>
-        <th style="color: mediumvioletred"> - OZNAKA - </th>
-        <th style="color: mediumvioletred"> - OPIS - </th>
-        <th style="color: mediumvioletred"> - ID NADR.KATEGORIJE - </th>
-    </tr>
-    <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
-    <c:forEach var="kategorija" items="${kategorije}">
-        <tr>
-            <td>${kategorija.id_kategorije}</td>
-            <td>${kategorija.kategorija}</td>
-            <td>${kategorija.oznaka}</td>
-            <td>${kategorija.opis}</td>
-            <td>${kategorija.id_nadrejene_kategorije}</td>
-        </tr>
-    </c:forEach>
-</table>
-<br />
-<div>
-    <button:buttonHome />
+<div align="center">
+    <h1>KATEGORIJE</h1>
     <div>
-        <c:set var="controllerUrl" value="kategorije" />
-        <form:form action="/ApiProjectWork/${controllerUrl}/get">
-            <input type="submit" value="BACK" class="inputButton" />
-        </form:form>
+        <table style="border: blueviolet" border="1">
+            <tr>
+                <th style="color: mediumvioletred"> - ID KATEGORIJE - </th>
+                <th style="color: mediumvioletred"> - KATEGORIJA - </th>
+                <th style="color: mediumvioletred"> - OZNAKA - </th>
+                <th style="color: mediumvioletred"> - OPIS - </th>
+                <th style="color: mediumvioletred"> - ID NADR.KATEGORIJE - </th>
+            </tr>
+            <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
+            <c:forEach var="kategorija" items="${kategorije}">
+                <tr>
+                    <td>${kategorija.id_kategorije}</td>
+                    <td>${kategorija.kategorija}</td>
+                    <td>${kategorija.oznaka}</td>
+                    <td>${kategorija.opis}</td>
+                    <td>${kategorija.id_nadrejene_kategorije}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <br />
+    <div>
+        <div>
+            <c:set var="controllerUrl" value="kategorije" />
+            <form:form action="/ApiProjectWork/${controllerUrl}/get">
+                <input type="submit" value="BACK" class="inputButton" />
+            </form:form>
+        </div>
+
+        <button:buttonHome />
     </div>
 </div>
 </body>

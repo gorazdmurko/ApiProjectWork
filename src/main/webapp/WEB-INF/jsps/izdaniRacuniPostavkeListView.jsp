@@ -16,42 +16,45 @@
     <title>ALL BLAGAJNE</title>
 </head>
 <body class="body">
-<h1 align="center">
-    IZDANI RACUNI POSTAVKE
-</h1>
-<table style="border: blueviolet" border="1">
-    <tr>
-        <th style="color: mediumvioletred"> - ID IZDANI RAC. POSTAVKE - </th>
-        <th style="color: mediumvioletred"> - ID IZDANI RACUNI - </th>
-        <th style="color: mediumvioletred"> - ID IZDELKI STORITVE - </th>
-        <th style="color: mediumvioletred"> - KOLICINA - </th>
-        <th style="color: mediumvioletred"> - POPUST - </th>
-        <th style="color: mediumvioletred"> - ODSTOTEK DDV - </th>
-        <th style="color: mediumvioletred"> - ID DAV. STOPNJE - </th>
-        <th style="color: mediumvioletred"> - PLACA ZZZS - </th>
-    </tr>
-    <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
-    <c:forEach var="postavka" items="${postavke}">
-        <tr>
-            <td>${postavka.id_izdani_racuni_postavke}</td>
-            <td>${postavka.id_izdani_racuni}</td>
-            <td>${postavka.id_izdelki_storitve}</td>
-            <td>${postavka.kolicina}</td>
-            <td>${postavka.popust}</td>
-            <td>${postavka.odstotek_ddv}</td>
-            <td>${postavka.id_davcne_stopnje}</td>
-            <td>${postavka.placa_zzzs}</td>
-        </tr>
-    </c:forEach>
-</table>
-<br />
-<div>
-    <button:buttonHome />
+<div align="center">
+    <h1>IZDANI RACUNI POSTAVKE</h1>
     <div>
-        <c:set var="controllerUrl" value="izdani-racuni-postavke" />
-        <form:form action="/ApiProjectWork/${controllerUrl}/get">
-            <input type="submit" value="BACK" class="inputButton" />
-        </form:form>
+        <table style="border: blueviolet" border="1">
+            <tr>
+                <th style="color: mediumvioletred"> - ID IZDANI RAC. POSTAVKE - </th>
+                <th style="color: mediumvioletred"> - ID IZDANI RACUNI - </th>
+                <th style="color: mediumvioletred"> - ID IZDELKI STORITVE - </th>
+                <th style="color: mediumvioletred"> - KOLICINA - </th>
+                <th style="color: mediumvioletred"> - POPUST - </th>
+                <th style="color: mediumvioletred"> - ODSTOTEK DDV - </th>
+                <th style="color: mediumvioletred"> - ID DAV. STOPNJE - </th>
+                <th style="color: mediumvioletred"> - PLACA ZZZS - </th>
+            </tr>
+            <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
+            <c:forEach var="postavka" items="${postavke}">
+                <tr>
+                    <td>${postavka.id_izdani_racuni_postavke}</td>
+                    <td>${postavka.id_izdani_racuni}</td>
+                    <td>${postavka.id_izdelki_storitve}</td>
+                    <td>${postavka.kolicina}</td>
+                    <td>${postavka.popust}</td>
+                    <td>${postavka.odstotek_ddv}</td>
+                    <td>${postavka.id_davcne_stopnje}</td>
+                    <td>${postavka.placa_zzzs}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <br />
+    <div>
+        <div>
+            <c:set var="controllerUrl" value="izdani-racuni-postavke" />
+            <form:form action="/ApiProjectWork/${controllerUrl}/get">
+                <input type="submit" value="BACK" class="inputButton" />
+            </form:form>
+        </div>
+
+        <button:buttonHome />
     </div>
 </div>
 </body>

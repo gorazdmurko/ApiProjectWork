@@ -16,32 +16,35 @@
     <title>ALL BLAGAJNE</title>
 </head>
 <body class="body">
-<h1 align="center">
-    DRZAVE
-</h1>
-<table style="border: blueviolet" border="1">
-    <tr>
-        <th style="color: mediumvioletred"> - ID DRZAVE - </th>
-        <th style="color: mediumvioletred"> - DRZAVA - </th>
-        <th style="color: mediumvioletred"> - OZNAKA - </th>
-    </tr>
-    <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
-    <c:forEach var="drzave" items="${drzave}">
-        <tr>
-            <td>${drzave.id_drzave}</td>
-            <td>${drzave.drzava}</td>
-            <td>${drzave.oznaka_drzave}</td>
-        </tr>
-    </c:forEach>
-</table>
-<br />
-<div>
-    <button:buttonHome />
+<div align="center">
+    <h1>DRZAVE</h1>
     <div>
-        <c:set var="controllerUrl" value="drzava" />
-        <form:form action="/ApiProjectWork/${controllerUrl}/get">
-            <input type="submit" value="BACK" class="inputButton" />
-        </form:form>
+        <table style="border: blueviolet" border="1">
+            <tr>
+                <th style="color: mediumvioletred"> - ID DRZAVE - </th>
+                <th style="color: mediumvioletred"> - DRZAVA - </th>
+                <th style="color: mediumvioletred"> - OZNAKA - </th>
+            </tr>
+            <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
+            <c:forEach var="drzave" items="${drzave}">
+                <tr>
+                    <td>${drzave.id_drzave}</td>
+                    <td>${drzave.drzava}</td>
+                    <td>${drzave.oznaka_drzave}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <br />
+    <div>
+        <div>
+            <c:set var="controllerUrl" value="drzava" />
+            <form:form action="/ApiProjectWork/${controllerUrl}/get">
+                <input type="submit" value="BACK" class="inputButton" />
+            </form:form>
+        </div>
+
+        <button:buttonHome />
     </div>
 </div>
 </body>

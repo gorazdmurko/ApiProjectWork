@@ -19,43 +19,45 @@
 
 <testViewTag:davcne_stopnje />
 
-<div>
-    <form action="getEntity", method="post">
-        <label for="davcnaId">ID drzave</label>
-        <input type="number" id="davcnaId" name="id" />
-        <input type="submit" value="FETCH" />
-        <span>${error}</span>
-    </form>
-</div>
-<br />
-<div>
-    <form action="getList", method="get">
-        <label for="getAll" name="getAll">GET ALL</label>
-        <input type="submit" id="getAll" value="GET ALL">
-    </form>
-</div>
-<div>
-    <form:form action="/ApiProjectWork" method="get">
-        <input type="submit" value="HOME" class="inputButton" />
-    </form:form>
-</div>
-<div>
-    <c:if test="${id != null}">
-        <table style="border: blueviolet" border="1">
-            <tr>
-                <th style="color: mediumvioletred"> - ID DAVCNE STOPNJE - </th>
-                <th style="color: mediumvioletred"> - OZNAKA_DDV - </th>
-                <th style="color: mediumvioletred"> - DAVCNA STOPNJA - </th>
-                <th style="color: mediumvioletred"> - ODSTOTEK - </th>
-            </tr>
-            <tr>
-                <td>${id}</td>
-                <td>${oznaka}</td>
-                <td>${stopnja}</td>
-                <td>${odstotek}</td>
-            </tr>
-        </table>
-    </c:if>
+<div align="center">
+    <div>
+        <form action="getEntity", method="post">
+            <label for="davcnaId">ID drzave</label>
+            <input type="number" id="davcnaId" name="id" />
+            <input type="submit" value="FETCH" />
+            <span>${error}</span>
+        </form>
+    </div>
+    <br />
+    <div>
+        <form action="getList", method="get">
+            <label for="getAll" name="getAll">GET ALL</label>
+            <input type="submit" id="getAll" value="GET ALL">
+        </form>
+    </div>
+    <div>
+        <form:form action="/ApiProjectWork" method="get">
+            <input type="submit" value="HOME" class="inputButton" />
+        </form:form>
+    </div>
+    <div>
+        <c:if test="${id != null}">
+            <table style="border: blueviolet" border="1">
+                <tr>
+                    <th style="color: mediumvioletred"> - ID DAVCNE STOPNJE - </th>
+                    <th style="color: mediumvioletred"> - OZNAKA_DDV - </th>
+                    <th style="color: mediumvioletred"> - DAVCNA STOPNJA - </th>
+                    <th style="color: mediumvioletred"> - ODSTOTEK - </th>
+                </tr>
+                <tr>
+                    <td>${id}</td>
+                    <td>${oznaka}</td>
+                    <td>${stopnja}</td>
+                    <td>${odstotek}</td>
+                </tr>
+            </table>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>

@@ -16,34 +16,37 @@
     <title>API</title>
 </head>
 <body class="body">
-<h1 align="center">
-    PAKETI POZICIJE
-</h1>
-<table style="border: blueviolet" border="1">
-    <tr>
-        <th style="color: mediumvioletred"> - ID PAKETI POZICIJE - </th>
-        <th style="color: mediumvioletred"> - ID IZDELKI STORITVE PAKETI - </th>
-        <th style="color: mediumvioletred"> - ID IZDELKI STORITVE - </th>
-        <th style="color: mediumvioletred"> - KOLICINA - </th>
-    </tr>
-    <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
-    <c:forEach var="paket" items="${paketi}">
-        <tr>
-            <td>${paket.id_paketi_pozicije}</td>
-            <td>${paket.id_izdelki_storitve_paketi}</td>
-            <td>${paket.id_izdelki_storitve}</td>
-            <td>${paket.kolicina}</td>
-        </tr>
-    </c:forEach>
-</table>
-<br />
-<div>
-    <button:buttonHome />
+<div align="center">
+    <h1>PAKETI POZICIJE</h1>
     <div>
-        <c:set var="controllerUrl" value="paketi-pozicije" />
-        <form:form action="/ApiProjectWork/${controllerUrl}/get">
-            <input type="submit" value="BACK" class="inputButton" />
-        </form:form>
+        <table style="border: blueviolet" border="1">
+            <tr>
+                <th style="color: mediumvioletred"> - ID PAKETI POZICIJE - </th>
+                <th style="color: mediumvioletred"> - ID IZDELKI STORITVE PAKETI - </th>
+                <th style="color: mediumvioletred"> - ID IZDELKI STORITVE - </th>
+                <th style="color: mediumvioletred"> - KOLICINA - </th>
+            </tr>
+            <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
+            <c:forEach var="paket" items="${paketi}">
+                <tr>
+                    <td>${paket.id_paketi_pozicije}</td>
+                    <td>${paket.id_izdelki_storitve_paketi}</td>
+                    <td>${paket.id_izdelki_storitve}</td>
+                    <td>${paket.kolicina}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <br />
+    <div>
+        <div>
+            <c:set var="controllerUrl" value="paketi-pozicije" />
+            <form:form action="/ApiProjectWork/${controllerUrl}/get">
+                <input type="submit" value="BACK" class="inputButton" />
+            </form:form>
+        </div>
+
+        <button:buttonHome />
     </div>
 </div>
 </body>

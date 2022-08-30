@@ -19,51 +19,53 @@
 
 <testViewTag:dotatne_stor_postavke />
 
-<div>
-    <form action="getEntity", method="post">
-        <label for="storitveId">ID drzave</label>
-        <input type="number" id="storitveId" name="id" />
-        <input type="submit" value="FETCH" />
-        <span>${error}</span>
-    </form>
-</div>
-<br />
-<div>
-    <form action="getList", method="get">
-        <label for="getAll" name="getAll">GET ALL</label>
-        <input type="submit" id="getAll" value="GET ALL">
-    </form>
-</div>
-<div>
-    <form:form action="/ApiProjectWork" method="get">
-        <input type="submit" value="HOME" class="inputButton" />
-    </form:form>
-</div>
-<div>
-    <c:if test="${id != null}">
-        <table style="border: blueviolet" border="1">
-            <tr>
-                <th style="color: mediumvioletred"> - ID DODATNE STORITVE - </th>
-                <th style="color: mediumvioletred"> - ID REZERVACIJE DODATNE STORITVE - </th>
-                <th style="color: mediumvioletred"> - ID STORITVE - </th>
-                <th style="color: mediumvioletred"> - KOLICINA - </th>
-                <th style="color: mediumvioletred"> - POPUST - </th>
-                <th style="color: mediumvioletred"> - ZACETEK - </th>
-                <th style="color: mediumvioletred"> - KONEC - </th>
-                <th style="color: mediumvioletred"> - OPIS - </th>
-            </tr>
-            <tr>
-                <td>${id}</td>
-                <td>${id_rezervacije}</td>
-                <td>${id_izdelki}</td>
-                <td>${kolicina}</td>
-                <td>${popust}</td>
-                <td>${zacetek}</td>
-                <td>${konec}</td>
-                <td>${opis}</td>
-            </tr>
-        </table>
-    </c:if>
+<div align="center">
+    <div>
+        <form action="getEntity", method="post">
+            <label for="storitveId">ID drzave</label>
+            <input type="number" id="storitveId" name="id" />
+            <input type="submit" value="FETCH" />
+            <span>${error}</span>
+        </form>
+    </div>
+    <br />
+    <div>
+        <form action="getList", method="get">
+            <label for="getAll" name="getAll">GET ALL</label>
+            <input type="submit" id="getAll" value="GET ALL">
+        </form>
+    </div>
+    <div>
+        <form:form action="/ApiProjectWork" method="get">
+            <input type="submit" value="HOME" class="inputButton" />
+        </form:form>
+    </div>
+    <div>
+        <c:if test="${id != null}">
+            <table style="border: blueviolet" border="1">
+                <tr>
+                    <th style="color: mediumvioletred"> - ID DODATNE STORITVE - </th>
+                    <th style="color: mediumvioletred"> - ID REZERVACIJE DODATNE STORITVE - </th>
+                    <th style="color: mediumvioletred"> - ID STORITVE - </th>
+                    <th style="color: mediumvioletred"> - KOLICINA - </th>
+                    <th style="color: mediumvioletred"> - POPUST - </th>
+                    <th style="color: mediumvioletred"> - ZACETEK - </th>
+                    <th style="color: mediumvioletred"> - KONEC - </th>
+                    <th style="color: mediumvioletred"> - OPIS - </th>
+                </tr>
+                <tr>
+                    <td>${id}</td>
+                    <td>${id_rezervacije}</td>
+                    <td>${id_izdelki}</td>
+                    <td>${kolicina}</td>
+                    <td>${popust}</td>
+                    <td>${zacetek}</td>
+                    <td>${konec}</td>
+                    <td>${opis}</td>
+                </tr>
+            </table>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>

@@ -16,36 +16,39 @@
     <title>ALL BLAGAJNE</title>
 </head>
 <body class="body">
-<h1 align="center">
-    DNEVNIK BLAGAJNE
-</h1>
-<table style="border: blueviolet" border="1">
-    <tr>
-        <th style="color: mediumvioletred"> - ID DNEVNIK BLAGAJNE - </th>
-        <th style="color: mediumvioletred"> - DATUM - CAS - </th>
-        <th style="color: mediumvioletred"> - UPORABNIK - </th>
-        <th style="color: mediumvioletred"> - OPERACIJA - </th>
-        <th style="color: mediumvioletred"> - KLJUC - </th>
-    </tr>
-    <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
-    <c:forEach var="dnevnik" items="${dnevnik}">
-        <tr>
-            <td>${dnevnik.id_dnevnik_blagajne}</td>
-            <td>${dnevnik.datum_cas}</td>
-            <td>${dnevnik.uporabnik}</td>
-            <td>${dnevnik.operacija}</td>
-            <td>${dnevnik.kljuc}</td>
-        </tr>
-    </c:forEach>
-</table>
-<br />
-<div>
-    <button:buttonHome />
+<div align="center">
+    <h1>DNEVNIK BLAGAJNE</h1>
     <div>
-        <c:set var="controllerUrl" value="blagajna" />
-        <form:form action="/ApiProjectWork/${controllerUrl}/get">
-            <input type="submit" value="BACK" class="inputButton" />
-        </form:form>
+        <table style="border: blueviolet" border="1">
+            <tr>
+                <th style="color: mediumvioletred"> - ID DNEVNIK BLAGAJNE - </th>
+                <th style="color: mediumvioletred"> - DATUM - CAS - </th>
+                <th style="color: mediumvioletred"> - UPORABNIK - </th>
+                <th style="color: mediumvioletred"> - OPERACIJA - </th>
+                <th style="color: mediumvioletred"> - KLJUC - </th>
+            </tr>
+            <!-- "blagajne" is the key value (attributeName) in our BlagajnaController method -->
+            <c:forEach var="dnevnik" items="${dnevnik}">
+                <tr>
+                    <td>${dnevnik.id_dnevnik_blagajne}</td>
+                    <td>${dnevnik.datum_cas}</td>
+                    <td>${dnevnik.uporabnik}</td>
+                    <td>${dnevnik.operacija}</td>
+                    <td>${dnevnik.kljuc}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <br />
+    <div>
+        <div>
+            <c:set var="controllerUrl" value="dnevnik-blagajne" />
+            <form:form action="/ApiProjectWork/${controllerUrl}/get">
+                <input type="submit" value="BACK" class="inputButton" />
+            </form:form>
+        </div>
+
+        <button:buttonHome />
     </div>
 </div>
 </body>
