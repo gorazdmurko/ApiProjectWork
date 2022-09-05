@@ -8,4 +8,6 @@ public interface IDrzaveDao {
     int create(Drzave drzava);
     Drzave get(Integer id);
     List<Drzave> getAll();
+    void deleteById(Integer id);
+    void deleteAll(Drzave drzave);
 }

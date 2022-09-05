@@ -30,6 +30,16 @@ public class DrzaveDaoImpl implements IDrzaveDao {
         return hibernateTemplate.loadAll(Drzave.class);
     }
 
+    @Override
+    public void deleteById(Integer id) {
+        hibernateTemplate.delete(this.get(id));
+    }
+
+    @Override
+    public void deleteAll(Drzave drzave) {
+        hibernateTemplate.delete(drzave);
+    }
+
     public HibernateTemplate getHibernateTemplate() {
         return hibernateTemplate;
     }

@@ -9,4 +9,6 @@ public interface IDrzaveService {
     int save(Drzave drzava);
     Drzave get(Integer id);
     List<Drzave> getAll();
+    public void deleteById(Integer id);
+    public void deleteAll(Drzave drzave);
 }

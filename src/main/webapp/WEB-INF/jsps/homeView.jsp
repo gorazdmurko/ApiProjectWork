@@ -60,7 +60,7 @@
 
         <div class="grid_item grid_item_5">
             <form:form action="drzava/get" method="post">
-                <input type="submit" name="get" value="DRZAVE" class="inputButton">
+                <input type="submit" name="get" value="DRZAVE" class="inputButton transactional">
             </form:form>
         </div>
 
@@ -108,7 +108,7 @@
 
         <div class="grid_item grid_item_13">
             <form:form action="osebe/get" method="post">
-                <input type="submit" name="get" value="OSEBE" class="inputButton">
+                <input type="submit" name="get" value="OSEBE" class="inputButton transactional">
             </form:form>
         </div>
 
@@ -132,7 +132,7 @@
 
         <div class="grid_item grid_item_17">
             <form:form action="postne_stevilke/get" method="post">
-                <input type="submit" name="getPostneStevilke" value="POSTNE STEVILKE" class="inputButton">
+                <input type="submit" name="getPostneStevilke" value="POSTNE STEVILKE" class="inputButton transactional">
             </form:form>
         </div>
 

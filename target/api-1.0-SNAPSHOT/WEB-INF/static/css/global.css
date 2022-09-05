@@ -23,9 +23,32 @@
     background-color: aliceblue;
 }
 
-table {
-    border: 2px solid red;
-    color: red;
+.transactional {
+    background-color: yellowgreen;
+    /*background-color: darkturquoise;*/
+}
+
+.transactional:hover {
+    opacity: 40%;
+    background-color: darkturquoise;
+}
+
+.action {
+    height: 3vh;
+    width: 5vw;
+    min-width: 160px;
+    border: 2px solid white;
+    border-radius: 0.6vh;
+    color: black;
+    font-weight: bold;
+    background-color: coral;
+    margin: 1vh;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.action:hover {
+    opacity: 40%;
 }
 
 td {
@@ -39,4 +62,8 @@ tr, td {
 tr:hover {
     background-color: antiquewhite;
     opacity: 50%;
+}
+
+.inline {
+    display: inline-block;
 }
