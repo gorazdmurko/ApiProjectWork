@@ -82,7 +82,7 @@ public class DrzaveController {
         System.out.println("IME: " + drzave.getDrzava());
         System.out.println("OZNAKA: " + drzave.getOznaka_drzave());
 
-        // service.save(drzave);
+        service.save(drzave);
 
         redirectAttributes.addFlashAttribute("drzave", drzave);
         return "redirect:" + "/drzava" + RETURN_VIEW;

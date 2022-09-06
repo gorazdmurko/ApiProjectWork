@@ -67,3 +67,12 @@ tr:hover {
 .inline {
     display: inline-block;
 }
+
+.inputFormRow:hover {
+    opacity: 100%;
+    color: darkgreen;
+}
+
+.emptySpace:hover {
+    background-color: black;
+}

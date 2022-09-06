@@ -23,28 +23,28 @@
   <div>
     <form:form action="createDrzave" modelAttribute="drzave" method="post">
       <table>
-        <tr>
+        <tr class="inputFormRow">
           <td><form:input id="idDrzave" path="id_drzave" type="number" /></td>
-          <td><form:label for="idDrzave" path="id_drzave">ID</form:label></td>
+          <td><b><form:label for="idDrzave" path="id_drzave">ID</form:label></b></td>
         </tr>
-        <tr>
+        <tr class="emptySpace">
           <td>&nbsp</td>
         </tr>
-        <tr>
+        <tr class="inputFormRow">
           <td><form:input id="drzava" path="drzava" type="text" /></td>
-          <td><form:label for="drzava" path="drzava">DRZAVA</form:label></td>
+          <td><b><form:label for="drzava" path="drzava">DRZAVA</form:label></b></td>
         </tr>
-        <tr>
+        <tr class="emptySpace">
           <td>&nbsp</td>
         </tr>
-        <tr>
+        <tr class="inputFormRow">
           <td><form:input id="oznaka" path="oznaka_drzave" type="text" /></td>
-          <td><form:label for="oznaka" path="oznaka_drzave">OZNAKA</form:label></td>
+          <td><b><form:label for="oznaka" path="oznaka_drzave">OZNAKA</form:label></b></td>
         </tr>
-        <tr>
+        <tr class="emptySpace">
           <td>&nbsp</td>
         </tr>
-        <tr colspan="2">
+        <tr class="inputFormRow emptySpace" colspan="2">
           <td><input class="action" type="submit" value="SAVE"></td>
         </tr>
       </table>
