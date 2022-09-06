@@ -36,7 +36,7 @@
         </form>
     </div>
     <div>
-        <form:form action="getForm" method="get">
+        <form:form action="getForm2" method="get">
             <input type="submit" value="CREATE" class="inputButton" />
         </form:form>
     </div>

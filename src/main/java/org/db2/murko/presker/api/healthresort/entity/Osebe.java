@@ -1,8 +1,12 @@
 package org.db2.murko.presker.api.healthresort.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 @Entity
@@ -15,6 +19,7 @@ public class Osebe {
     private String priimek;
     private String emso;
     private String spol;
+    // @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date datum_rojstva;
     private String naslov;
     private String davcna_stevilka;

@@ -14,6 +14,5 @@
 <h1>This is a customized error page</h1>
 ${msg}
 
-<p>Channel Name: ${channel}</p>
 </body>
 </html>

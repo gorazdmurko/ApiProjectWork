@@ -5,6 +5,7 @@ import org.db2.murko.presker.api.healthresort.entity.PostneStevilke;
 import org.db2.murko.presker.api.healthresort.services.IPostneStevilkeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class PostneStevilkeServiceImpl implements IPostneStevilkeService {
     private IPostneStevilkeDao dao;
 
     @Override
+    @Transactional
     public int save(PostneStevilke stevilka) {
         return dao.create(stevilka);
     }

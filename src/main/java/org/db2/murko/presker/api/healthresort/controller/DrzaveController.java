@@ -9,6 +9,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.imageio.ImageIO;
@@ -64,15 +65,24 @@ public class DrzaveController {
         return DRZAVA_LIST_VIEW;
     }
 
-    @RequestMapping(value = "/getForm", method = RequestMethod.GET)
+
+    // 1 .way
+    @RequestMapping(value = "/getForm1", method = RequestMethod.GET)
+    public ModelAndView showForm() {
+        System.out.println("1. method called");
+        return new ModelAndView(DRZAVA_ADD_VIEW, "drzave", new Drzave());
+    }
+    // 2. way
+    @RequestMapping(value = "/getForm2", method = RequestMethod.GET)
     public String getDrzaveForm(@ModelAttribute("drzave") Drzave drzave, Model model) {
+        System.out.println("2. method called");
         return DRZAVA_ADD_VIEW;
     }
 
     @RequestMapping(value = "/createDrzave", method = RequestMethod.POST)
     public String createDrzave(@ModelAttribute("drzave") Drzave drzave, BindingResult bindingResult, ModelMap model, RedirectAttributes redirectAttributes) {
 
-        System.out.println("Saving posted user ...");
+        System.out.println("Saving posted state ...");
         if (bindingResult.hasErrors()) {
             return ERROR_VIEW;
         }

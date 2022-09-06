@@ -73,6 +73,6 @@ tr:hover {
     color: darkgreen;
 }
 
-.emptySpace:hover {
+.emptySpace:hover, .form:hover {
     background-color: black;
 }

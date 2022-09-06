@@ -23,21 +23,21 @@
   <div>
     <form:form action="createDrzave" modelAttribute="drzave" method="post">
       <table>
-        <tr class="inputFormRow">
+        <tr class="inputFormRow form">
           <td><form:input id="idDrzave" path="id_drzave" type="number" /></td>
           <td><b><form:label for="idDrzave" path="id_drzave">ID</form:label></b></td>
         </tr>
         <tr class="emptySpace">
           <td>&nbsp</td>
         </tr>
-        <tr class="inputFormRow">
+        <tr class="inputFormRow form">
           <td><form:input id="drzava" path="drzava" type="text" /></td>
           <td><b><form:label for="drzava" path="drzava">DRZAVA</form:label></b></td>
         </tr>
         <tr class="emptySpace">
           <td>&nbsp</td>
         </tr>
-        <tr class="inputFormRow">
+        <tr class="inputFormRow form">
           <td><form:input id="oznaka" path="oznaka_drzave" type="text" /></td>
           <td><b><form:label for="oznaka" path="oznaka_drzave">OZNAKA</form:label></b></td>
         </tr>
