@@ -35,11 +35,13 @@
             <input type="submit" id="getAll" value="GET ALL">
         </form:form>
     </div>
+    <!---->
     <div>
         <form:form action="getForm2" method="get">
             <input type="submit" value="CREATE" class="inputButton" />
         </form:form>
     </div>
+    <!---->
     <div>
         <form:form action="/ApiProjectWork" method="get">
             <input type="submit" value="HOME" class="inputButton" />

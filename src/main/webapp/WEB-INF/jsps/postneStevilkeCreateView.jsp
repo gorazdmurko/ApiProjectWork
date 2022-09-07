@@ -15,7 +15,11 @@
 <html>
 <head>
     <title>Drzava</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 </head>
+
 <body class="body">
 
 <div align="center">
@@ -24,29 +28,29 @@
         <form:form action="createPostneStevilke" modelAttribute="postnestevilke" method="post">
             <table>
                 <tr class="inputFormRow form">
-                    <td><form:input id="idPostneStevilke" path="id_postne_stevilke" type="number" /></td>
-                    <td><b><form:label for="idPostneStevilke" path="id_postne_stevilke">ID POTSNE STEVILKE</form:label></b></td>
+                    <td><form:input id="idPostneStevilke" path="id_postne_stevilke" type="number" required="required" /></td><span id="error"></span>
+                    <td><b><form:label for="idPostneStevilke" path="id_postne_stevilke">ID POSTNE STEVILKE</form:label></b></td>
                 </tr>
                 <tr class="emptySpace">
                     <td>&nbsp</td>
                 </tr>
                 <tr class="inputFormRow form">
-                    <td><form:input id="postnaStevilka" path="postna_stevilka" type="text" /></td>
-                    <td><b><form:label for="postnaStevilka" path="postna_stevilka">POSTNA sTEVILKA</form:label></b></td>
+                    <td><form:input id="postnaStevilka" path="postna_stevilka" type="text" required="required" /></td>
+                    <td><b><form:label for="postnaStevilka" path="postna_stevilka">POSTNA STEVILKA</form:label></b></td>
                 </tr>
                 <tr class="emptySpace">
                     <td>&nbsp</td>
                 </tr>
                 <tr class="inputFormRow form">
-                    <td><form:input id="kraj" path="kraj_mesto" type="text" /></td>
+                    <td><form:input id="kraj" path="kraj_mesto" type="text" required="required" /></td>
                     <td><b><form:label for="kraj" path="kraj_mesto">MESTO</form:label></b></td>
                 </tr>
                 <tr class="emptySpace">
                     <td>&nbsp</td>
                 </tr>
                 <tr class="inputFormRow form">
-                    <td><form:input id="idDrzave" path="id_drzave" type="number" /></td>
-                    <td><b><form:label for="idDrzave" path="id_drzave">ID DRZAVE</form:label></b></td>
+                    <td><form:input id="stateId" path="id_drzave" type="number" required="required" /></td>
+                    <td><b><form:label for="stateId" path="id_drzave">ID DRZAVE</form:label></b></td>
                 </tr>
                 <tr class="emptySpace">
                     <td>&nbsp</td>
@@ -75,6 +79,12 @@
 </body>
 </html>
 
+<!-- JAVASCRIPT import !! -->
+<script>
+    <%@ include file="/WEB-INF/static/javascript/main.js"%>
+</script>
+
+<!-- CSS import !! -->
 <style>
     <%@ include file="/WEB-INF/static/css/global.css" %>
 </style>

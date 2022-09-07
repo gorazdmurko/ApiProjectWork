@@ -52,8 +52,16 @@
                     <td>&nbsp</td>
                 </tr>
                 <tr class="inputFormRow form">
-                    <td><form:input id="spol" path="spol" type="text" /></td>
-                    <td><b><form:label for="spol" path="spol">SPOL</form:label></b></td>
+                    <td>
+                        <form:select id="spol" path="spol">
+                            <form:option value="" selected="selected" disabled="disabled" hidden="hidden">SPOL</form:option>
+                            <form:option value="ženski" label="Ženski"></form:option>
+                            <form:option value="moški" label="Moški"></form:option>
+                        </form:select>
+                    </td>
+                    <td><label for="spol">SPOL</label></td>
+<%--                    <td><form:input id="spol" path="spol" type="text" /></td>--%>
+<%--                    <td><b><form:label for="spol" path="spol">SPOL</form:label></b></td>--%>
                 </tr>
                 <tr class="emptySpace">
                     <td>&nbsp</td>

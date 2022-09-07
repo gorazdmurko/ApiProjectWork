@@ -6,6 +6,7 @@ import org.db2.murko.presker.api.healthresort.entity.PostneStevilke;
 import org.db2.murko.presker.api.healthresort.services.IOsebeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -102,10 +103,11 @@ public class OsebeController {
                                ModelMap model, RedirectAttributes redirectAttributes) {
 
         System.out.println("Saving posted user ...");
-//        if (bindingResult.hasErrors()) {
-//            model.addAttribute("msg", bindingResult);
-//            return ERROR_VIEW;
-//        }
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("error", bindingResult);
+            model.addAttribute("url", "osebe");
+            return ERROR_VIEW;
+        }
 
         String spol = osebe.getSpol();
         byte[] bytes = spol.getBytes(StandardCharsets.UTF_8);
@@ -123,7 +125,14 @@ public class OsebeController {
         System.out.println("Davcna stevilka: " + osebe.getDavcna_stevilka());
         System.out.println("Id postne stevilke: " + osebe.getId_postne_stevilke());
 
-        service.save(osebe);
+        try {
+            service.save(osebe);
+        } catch (DataIntegrityViolationException e) {
+            System.out.println("Exception" + e);
+            model.addAttribute("error", e);
+            model.addAttribute("url", "osebe");
+            return ERROR_VIEW;
+        }
 
         redirectAttributes.addFlashAttribute("osebe", osebe);
         return "redirect:" + "/osebe" + RETURN_VIEW;

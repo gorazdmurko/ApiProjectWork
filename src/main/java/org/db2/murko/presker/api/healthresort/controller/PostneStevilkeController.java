@@ -2,6 +2,7 @@ package org.db2.murko.presker.api.healthresort.controller;
 
 import org.db2.murko.presker.api.healthresort.entity.Drzave;
 import org.db2.murko.presker.api.healthresort.entity.PostneStevilke;
+import org.db2.murko.presker.api.healthresort.services.IDrzaveService;
 import org.db2.murko.presker.api.healthresort.services.IPostneStevilkeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,6 +21,8 @@ public class PostneStevilkeController {
 
     @Autowired
     private IPostneStevilkeService service;
+    @Autowired
+    private IDrzaveService serviceDrzave;
 
     private final String POSTNE_VIEW = "postneStevilkeView";
     private final String POSTNE_LIST_VIEW = "postneStevilkeListView";
@@ -54,6 +57,14 @@ public class PostneStevilkeController {
         return POSTNE_VIEW;
     }
 
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
+    public String getList(ModelMap model) {
+        List<PostneStevilke> list = service.getAll();
+        System.out.println("List of PostneStevilke: " + list);
+        model.addAttribute("stevilke", list);
+        return POSTNE_LIST_VIEW;
+    }
+
 
     // 1. way
     @RequestMapping(value = "/getForm1", method = RequestMethod.GET)
@@ -74,6 +85,8 @@ public class PostneStevilkeController {
 
         System.out.println("Saving posted number ...");
         if (bindingResult.hasErrors()) {
+            model.addAttribute("error", bindingResult);
+            model.addAttribute("url", "postne_stevilke");
             return ERROR_VIEW;
         }
 
@@ -89,12 +102,38 @@ public class PostneStevilkeController {
         return "redirect:" + "/postne_stevilke" + RETURN_VIEW;
     }
 
-    @RequestMapping(value = "/getList", method = RequestMethod.GET)
-    public String getList(ModelMap model) {
-        List<PostneStevilke> list = service.getAll();
-        System.out.println("List of PostneStevilke: " + list);
-        model.addAttribute("stevilke", list);
-        return POSTNE_LIST_VIEW;
+    @RequestMapping(value = "/validateIdPostneStevilke")
+    public @ResponseBody String validateIdPoste(@RequestParam("id") Integer id) {
+
+        System.out.println("Id validator invoked");
+
+        PostneStevilke stevilka = service.get(id);
+        String msg = "";
+
+        if (stevilka != null) {
+            msg = id + " already exists";
+        }
+
+        stevilka.toString();
+
+        return msg;
+    }
+
+    @RequestMapping(value = "/validateIdDrzave")
+    public @ResponseBody String validateIdDrzave(@RequestParam("id") Integer id) {
+
+        System.out.println("Id validator invoked");
+
+        Drzave drzava = serviceDrzave.get(id);
+        String msg = "";
+
+        if (drzava != null) {
+            msg = id + " already exists";
+        }
+
+        drzava.toString();
+
+        return msg;
     }
 
     @RequestMapping(value = "/back")

@@ -14,6 +14,9 @@
 <html>
 <head>
     <title>Drzava</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 </head>
 <body class="body">
 
@@ -23,8 +26,9 @@
     <div>
         <form action="getDrzava", method="post">
             <label for="drzavaId">ID drzave</label>
-            <input type="number" id="drzavaId" name="id" />
+            <input type="number" id="drzavaId" name="id" required />
             <input type="submit" value="FETCH" />
+<%--            <input type="button" value="DELETE" id="deleteState" />--%>
             <span>${error}</span>
         </form>
     </div>
@@ -65,6 +69,12 @@
 </body>
 </html>
 
+<!-- JAVASCRIPT import !! -->
+<script>
+    <%@ include file="/WEB-INF/static/javascript/main.js"%>
+</script>
+
+<!-- CSS import !! -->
 <style>
     <%@ include file="/WEB-INF/static/css/global.css" %>
 </style>

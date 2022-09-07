@@ -84,6 +84,7 @@ public class DrzaveController {
 
         System.out.println("Saving posted state ...");
         if (bindingResult.hasErrors()) {
+            model.addAttribute("error", bindingResult);
             return ERROR_VIEW;
         }
 
@@ -96,6 +97,33 @@ public class DrzaveController {
 
         redirectAttributes.addFlashAttribute("drzave", drzave);
         return "redirect:" + "/drzava" + RETURN_VIEW;
+    }
+
+    @RequestMapping(value = "/validateIdDrzave")
+    public @ResponseBody String validateId(@RequestParam("id") Integer id) {
+
+        System.out.println("Id validator invoked");
+
+        Drzave drzava = service.get(id);
+        String msg = "";
+
+        if (drzava != null) {
+            msg = id + " already exists";
+        }
+
+        drzava.toString();
+
+        return msg;
+    }
+
+    @RequestMapping(value = "/deleteDrzava")
+    public @ResponseBody String deleteById(@RequestParam("id") Integer id) {
+
+        System.out.println("Delete by ID invoked! Id = " + id);
+
+        service.deleteById(id);
+
+        return "deleted";
     }
 
 
