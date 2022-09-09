@@ -25,7 +25,7 @@
 <div align="center">
     <testViewTag:postneStevilkeCreate />
     <div>
-        <form:form action="createPostneStevilke" modelAttribute="postnestevilke" method="post">
+        <form:form class="input-form" action="createPostneStevilke" modelAttribute="postnestevilke" method="post">
             <table>
                 <tr class="inputFormRow form">
                     <td><form:input id="idPostneStevilke" path="id_postne_stevilke" type="number" required="required" /></td><span id="error"></span>

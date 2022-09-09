@@ -21,7 +21,7 @@
 <div align="center">
     <testViewTag:osebaCreate />
     <div>
-        <form:form action="createOsebe" modelAttribute="osebe" method="post">
+        <form:form class="input-form" action="createOsebe" modelAttribute="osebe" method="post">
             <table>
                 <tr class="inputFormRow form">
                     <td><form:input id="idosebe" path="id_osebe" type="number" /></td>
@@ -53,7 +53,7 @@
                 </tr>
                 <tr class="inputFormRow form">
                     <td>
-                        <form:select id="spol" path="spol">
+                        <form:select id="spol" class="select" path="spol">
                             <form:option value="" selected="selected" disabled="disabled" hidden="hidden">SPOL</form:option>
                             <form:option value="ženski" label="Ženski"></form:option>
                             <form:option value="moški" label="Moški"></form:option>

@@ -52,6 +52,10 @@
         border: 2px solid bisque;
     }
 
+    .submitButton:hover {
+        cursor: pointer;
+    }
+
     .error {
         margin: 10px 0;
         padding: 0 20px;

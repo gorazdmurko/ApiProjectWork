@@ -25,7 +25,7 @@
 <div align="center">
   <testViewTag:drzaveCreate />
   <div>
-    <form:form action="createDrzave" modelAttribute="drzave" method="post">
+    <form:form class="input-form" action="createDrzave" modelAttribute="drzave" method="post">
       <table>
         <tr class="inputFormRow form">
           <td><form:input id="idDrzave" path="id_drzave" type="number" required="required" /></td>

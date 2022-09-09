@@ -34,21 +34,20 @@
 }
 
 .action {
-    height: 3vh;
+    height: 4vh;
     width: 5vw;
     min-width: 160px;
     border: 2px solid white;
-    border-radius: 0.6vh;
     color: black;
     font-weight: bold;
     background-color: coral;
     margin: 1vh;
     padding: 1px;
-    cursor: pointer;
 }
 
 .action:hover {
     opacity: 40%;
+    cursor: pointer;
 }
 
 td {
@@ -75,4 +74,23 @@ tr:hover {
 
 .emptySpace:hover, .form:hover {
     background-color: black;
+}
+
+.input-form {
+    padding: 20px;
+}
+
+.input-form .form {
+    padding-bottom: 15px;
+}
+
+.input-form label {
+    display: block;
+}
+
+.input-form input[type="text"],
+.input-form input[type="number"],
+.input-form input[type="date"], .select {
+    padding: 8px;
+    width: 100%;
 }
