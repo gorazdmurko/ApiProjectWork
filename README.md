@@ -45,7 +45,7 @@
 3. git merge develop
 
 # CLONE
-1. git clone --branch master https://github.com/gorazdmurko/Hybris-Sap-Commerce-Training.git custom --> clone from specific branch to specific folder
+1. git clone --branch master https://github.com/gorazdmurko/ApiProjectWork.git custom --> clone from specific branch to specific folder
 
 # DELETE BRANCHES
 1. git branch -d 'branch_name' ~~ delete local branch
