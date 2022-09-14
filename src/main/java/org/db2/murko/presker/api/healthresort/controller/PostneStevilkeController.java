@@ -104,18 +104,12 @@ public class PostneStevilkeController {
 
     @RequestMapping(value = "/validateIdPostneStevilke")
     public @ResponseBody String validateIdPoste(@RequestParam("id") Integer id) {
-
-        System.out.println("Id validator invoked");
-
         PostneStevilke stevilka = service.get(id);
         String msg = "";
-
         if (stevilka != null) {
             msg = id + " already exists";
         }
-
         stevilka.toString();
-
         return msg;
     }
 
